@@ -1,0 +1,1932 @@
+\documentclass[twocolumn,superscriptaddress,prd]{revtex4}
+%\documentclass[preprint,superscriptaddress,prd]{revtex4}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage[usenames]{color}
+\usepackage{array} % for better arrays (eg matrices) in maths
+\def\R{\textcolor{red}}
+\def\balpha{\bar{\alpha}}
+\def\m{M}
+\def\l{L}
+\def\wyn{\mbox{$N_{data}$}}
+\def\acc{\mbox{$N_{rec.}$}}
+\def\raw{\mbox{$N_{gen.}$}}
+\def\qq{{q{\bar q}}}
+\def\x{{\bf x}}
+\def\y{{\bf y}}
+\def\z{{\bf z}}
+\def\k{{\bf k}}
+\def\q{{\bf q}}
+\def\p{{\bf p}}
+\def\P{{\bf P}}
+\def\A{{\bf A}}
+\def\B{{\bf B}}
+\def\J{{\bf J}}
+\def\Y{\tilde{Y}} 
+\def\na{\bbox{\nabla}}
+\def\cs{{\chi S}}
+\def\lsim{\mathrel{\rlap{\lower4pt\hbox{\hskip1pt$\sim$}}
+   \raise1pt\hbox{$<$}}}
+\def\gsim{\mathrel{\rlap{\lower4pt\hbox{\hskip1pt$\sim$}}
+   \raise1pt\hbox{$>$}}}
+
+\bibliographystyle{unsrt}   
+\begin{document}
+\topmargin 0.0001cm
+\title{Photoproduction of K$^+$ K$^-$ meson pairs on the proton\\}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\newcommand*{\INFNGE}{Istituto Nazionale di Fisica Nucleare, Sezione di Genova, 16146 Genova, Italy}
+\affiliation{\INFNGE}
+\newcommand*{\INDIANA} {Physics Department and Nuclear Theory Center \\ Indiana University, Bloomington, Indiana 47405}
+\affiliation{\INDIANA}
+
+
+\newcommand*{\ANL}{Argonne National Laboratory, Argonne, Illinois 60439}
+\newcommand*{\ANLindex}{1}
+\affiliation{\ANL}
+\newcommand*{\ASU}{Arizona State University, Tempe, Arizona 85287-1504}
+\newcommand*{\ASUindex}{2}
+\affiliation{\ASU}
+\newcommand*{\UCLA}{University of California at Los Angeles, Los Angeles, California  90095-1547}
+\newcommand*{\UCLAindex}{3}
+\affiliation{\UCLA}
+\newcommand*{\CSU}{California State University, Dominguez Hills, Carson, CA 90747}
+\newcommand*{\CSUindex}{4}
+\affiliation{\CSU}
+\newcommand*{\CMU}{Carnegie Mellon University, Pittsburgh, Pennsylvania 15213}
+\newcommand*{\CMUindex}{5}
+\affiliation{\CMU}
+\newcommand*{\CUA}{Catholic University of America, Washington, D.C. 20064}
+\newcommand*{\CUAindex}{6}
+\affiliation{\CUA}
+\newcommand*{\SACLAY}{CEA, Centre de Saclay, Irfu/Service de Physique Nucl\'eaire, 91191 Gif-sur-Yvette, France}
+\newcommand*{\SACLAYindex}{7}
+\affiliation{\SACLAY}
+\newcommand*{\CNU}{Christopher Newport University, Newport News, Virginia 23606}
+\newcommand*{\CNUindex}{8}
+\affiliation{\CNU}
+\newcommand*{\UCONN}{University of Connecticut, Storrs, Connecticut 06269}
+\newcommand*{\UCONNindex}{9}
+\affiliation{\UCONN}
+\newcommand*{\ECOSSEE}{Edinburgh University, Edinburgh EH9 3JZ, United Kingdom}
+\newcommand*{\ECOSSEEindex}{10}
+\affiliation{\ECOSSEE}
+\newcommand*{\FU}{Fairfield University, Fairfield CT 06824}
+\newcommand*{\FUindex}{11}
+\affiliation{\FU}
+\newcommand*{\FIU}{Florida International University, Miami, Florida 33199}
+\newcommand*{\FIUindex}{12}
+\affiliation{\FIU}
+\newcommand*{\FSU}{Florida State University, Tallahassee, Florida 32306}
+\newcommand*{\FSUindex}{13}
+\affiliation{\FSU}
+\newcommand*{\GWU}{The George Washington University, Washington, DC 20052}
+\newcommand*{\GWUindex}{14}
+\affiliation{\GWU}
+\newcommand*{\ECOSSEG}{University of Glasgow, Glasgow G12 8QQ, United Kingdom}
+\newcommand*{\ECOSSEGindex}{15}
+\affiliation{\ECOSSEG}
+\newcommand*{\ISU}{Idaho State University, Pocatello, Idaho 83209}
+\newcommand*{\ISUindex}{16}
+\affiliation{\ISU}
+\newcommand*{\INFNFR}{INFN, Laboratori Nazionali di Frascati, 00044 Frascati, Italy}
+\newcommand*{\INFNFRindex}{17}
+\affiliation{\INFNFR}
+\newcommand*{\INFNRO}{INFN, Sezione di Roma Tor Vergata, 00133 Rome, Italy}
+\newcommand*{\INFNROindex}{19}
+\affiliation{\INFNRO}
+\newcommand*{\ORSAY}{Institut de Physique Nucl\'eaire ORSAY, Orsay, France}
+\newcommand*{\ORSAYindex}{20}
+\affiliation{\ORSAY}
+\newcommand*{\ITEP}{Institute of Theoretical and Experimental Physics, Moscow, 117259, Russia}
+\newcommand*{\ITEPindex}{21}
+\affiliation{\ITEP}
+\newcommand*{\IHEP}{Institute for High Energy Physics, Protvino, 142281, Russia}
+\affiliation{\IHEP}
+\newcommand*{\JMU}{James Madison University, Harrisonburg, Virginia 22807}
+\newcommand*{\JMUindex}{22}
+\affiliation{\JMU}
+\newcommand*{\UK}{University of Kentucky, Lexington, Kentucky 40506}
+\affiliation{\UK}
+\newcommand*{\KHARKOV}{Kharkov Institute of Physics and Technology, Kharkov 61108, Ukraine}
+\affiliation{\KHARKOV}
+\newcommand*{\KYUNGPOOK}{Kyungpook National University, Daegu 702-701, Republic of Korea}
+\newcommand*{\KYUNGPOOKindex}{23}
+\affiliation{\KYUNGPOOK}
+\newcommand*{\UMASS}{University of Massachusetts, Amherst, Massachusetts  01003}
+\affiliation{\UMASS}
+\newcommand*{\NINP}{Henryk Niewodniczanski Institute of Nuclear Physics PAN, 31-342 Krakow, Poland}
+\affiliation{\NINP}
+\newcommand*{\UNH}{University of New Hampshire, Durham, New Hampshire 03824-3568}
+\newcommand*{\UNHindex}{24}
+\affiliation{\UNH}
+\newcommand*{\NSU}{Norfolk State University, Norfolk, Virginia 23504}
+\newcommand*{\NSUindex}{25}
+\affiliation{\NSU}
+\newcommand*{\UNCW}{University of North Carolina, Wilmington, North Carolina 28403}
+\affiliation{\UNCW}
+\newcommand*{\UAT}{North Carolina Agricultural and Technical State University, Greensboro, North Carolina 27455}
+\affiliation{\UAT}
+\newcommand*{\OHIOU}{Ohio University, Athens, Ohio  45701}
+\newcommand*{\OHIOUindex}{26}
+\affiliation{\OHIOU}
+\newcommand*{\ODU}{Old Dominion University, Norfolk, Virginia 23529}
+\newcommand*{\ODUindex}{27}
+\affiliation{\ODU}
+\newcommand*{\RPI}{Rensselaer Polytechnic Institute, Troy, New York 12180-3590}
+\newcommand*{\RPIindex}{28}
+\affiliation{\RPI}
+\newcommand*{\URICH}{University of Richmond, Richmond, Virginia 23173}
+\newcommand*{\URICHindex}{29}
+\affiliation{\URICH}
+\newcommand*{\ROMAII}{Universita' di Roma Tor Vergata, 00133 Rome Italy}
+\newcommand*{\ROMAIIindex}{30}
+\affiliation{\ROMAII}
+\newcommand*{\RIKEN}{The Institute of Physical and Chemical Research, RIKEN, Wako, Saitama 351-0198, Japan}
+\affiliation{\RIKEN}
+\newcommand*{\MOSCOW}{Skobeltsyn Nuclear Physics Institute, Skobeltsyn Nuclear Physics Institute, 119899 Moscow, Russia}
+\newcommand*{\MOSCOWindex}{31}
+\affiliation{\MOSCOW}
+\newcommand*{\SCAROLINA}{University of South Carolina, Columbia, South Carolina 29208}
+\newcommand*{\SCAROLINAindex}{32}
+\affiliation{\SCAROLINA}
+\newcommand*{\JLAB}{Thomas Jefferson National Accelerator Facility, Newport News, Virginia 23606}
+\newcommand*{\JLABindex}{33}
+\affiliation{\JLAB}
+\newcommand*{\UNIONC}{Union College, Schenectady, New York 12308}
+\newcommand*{\UNIONCindex}{34}
+\affiliation{\UNIONC}
+\newcommand*{\UTFSM}{Universidad T\'{e}cnica Federico Santa Mar\'{i}a, Casilla 110-V Valpara\'{i}so, Chile}
+\newcommand*{\UTFSMindex}{35}
+\affiliation{\UTFSM}
+\newcommand*{\VIRGINIA}{University of Virginia, Charlottesville, Virginia 22901}
+\newcommand*{\VIRGINIAindex}{36}
+\affiliation{\VIRGINIA}
+\newcommand*{\WM}{College of William and Mary, Williamsburg, Virginia 23187-8795}
+\affiliation{\WM}
+\newcommand*{\YEREVAN}{Yerevan Physics Institute, 375036 Yerevan, Armenia}
+\newcommand*{\YEREVANindex}{37}
+\affiliation{\YEREVAN}
+ 
+
+\newcommand*{\NOWJLAB}{Thomas Jefferson National Accelerator Facility, Newport News, Virginia 23606}
+\newcommand*{\NOWLANL}{Los Alamos National Laborotory, Los Alamos, New Mexico 87545}
+\newcommand*{\NOWCNU}{Christopher Newport University, Newport News, Virginia 23606}
+\newcommand*{\NOWECOSSEE}{Edinburgh University, Edinburgh EH9 3JZ, United Kingdom}
+\newcommand*{\NOWWM}{College of William and Mary, Williamsburg, Virginia 23187-8795}
+ %%%%%%%%%%%%%%% END OF Latex Macros for institute addresses  %%%%%%%%%%%%%%%%%%%%%%%%% 
+\author {S.~Lombardo} 
+\author {HASPECT WORKING GROUP MEMBERS} 
+%\author {M.~Battaglieri} 
+%\affiliation{\INFNGE}
+%\author {R.~De~Vita} 
+%\affiliation{\INFNGE}
+%\author {A.~P. Szczepaniak}
+%\affiliation{\INDIANA}
+
+\author {K. P. ~Adhikari} 
+\affiliation{\ODU}
+\author {M.J.~Amaryan} 
+\affiliation{\ODU}
+\author {M.~Anghinolfi} 
+\affiliation{\INFNGE}
+\author {H.~Baghdasaryan} 
+\affiliation{\VIRGINIA}
+\author {I.~Bedlinskiy} 
+\affiliation{\ITEP}
+\author {M.~Bellis} 
+\affiliation{\CMU}
+\author {L.~Bibrzycki}
+\affiliation{\NINP}
+\author {A.S.~Biselli} 
+\affiliation{\FU}
+\affiliation{\RPI}
+\author {C. ~Bookwalter} 
+\affiliation{\FSU}
+\author {D.~Branford} 
+\affiliation{\ECOSSEE}
+\author {W.J.~Briscoe} 
+\affiliation{\GWU}
+\author {V.D.~Burkert} 
+\affiliation{\JLAB}
+\author {S.L.~Careccia} 
+\affiliation{\ODU}
+\author {D.S.~Carman} 
+\affiliation{\JLAB}
+\author {E.~Clinton} 
+\affiliation{\UMASS}
+\author {P.L.~Cole} 
+\affiliation{\ISU}
+\author {P.~Collins} 
+\affiliation{\ASU}
+\author {V.~Crede} 
+\affiliation{\FSU}
+\author {D.~Dale} 
+\affiliation{\ISU}
+\author {A.~D'Angelo} 
+\affiliation{\INFNRO}
+\affiliation{\ROMAII}
+\author {A.~Daniel} 
+\affiliation{\OHIOU}
+\author {N.~Dashyan} 
+\affiliation{\YEREVAN}
+\author {E.~De~Sanctis} 
+\affiliation{\INFNFR}
+\author {A.~Deur} 
+\affiliation{\JLAB}
+\author {S.~Dhamija} 
+\affiliation{\FIU}
+\author {C.~Djalali} 
+\affiliation{\SCAROLINA}
+\author {G.E.~Dodge} 
+\affiliation{\ODU}
+\author {D.~Doughty} 
+\affiliation{\CNU}
+\affiliation{\JLAB}
+\author {V.~Drozdov}
+\affiliation{\INFNGE}
+\author {H.~Egiyan} 
+\affiliation{\UNH}
+\affiliation{\JLAB}
+\author {P.~Eugenio} 
+\affiliation{\FSU}
+\author {G.~Fedotov} 
+\affiliation{\MOSCOW}
+\author {S.~Fegan} 
+\affiliation{\ECOSSEG}
+\author {A.~Fradi} 
+\affiliation{\ORSAY}
+\author {M.Y.~Gabrielyan} 
+\affiliation{\FIU}
+\author {L.~Gan} 
+\affiliation{\UNCW}
+\author {M.~Gar\c con} 
+\affiliation{\SACLAY}
+\author {A.~Gasparian} 
+\affiliation{\UAT}
+\author {G.P.~Gilfoyle} 
+\affiliation{\URICH}
+\author {K.L.~Giovanetti} 
+\affiliation{\JMU}
+\author {F.X.~Girod} 
+\altaffiliation[Current address:]{\NOWJLAB}
+\affiliation{\SACLAY}
+\author {O.~Glamazdin} 
+\affiliation{\KHARKOV}
+\author {J.~Goett} 
+\affiliation{\RPI}
+\author {J.T.~Goetz} 
+\affiliation{\UCLA}
+\author {W.~Gohn} 
+\affiliation{\UCONN}
+\author {E.~Golovatch} 
+\affiliation{\MOSCOW}
+\affiliation{\INFNGE}
+\author {R.W.~Gothe} 
+\affiliation{\SCAROLINA}
+\author {K.A.~Griffioen} 
+\affiliation{\WM}
+\author {M.~Guidal} 
+\affiliation{\ORSAY}
+\author {L.~Guo} 
+\altaffiliation[Current address:]{\NOWLANL}
+\affiliation{\JLAB}
+\author {K.~Hafidi} 
+\affiliation{\ANL}
+\author {H.~Hakobyan} 
+\affiliation{\UTFSM}
+\affiliation{\YEREVAN}
+\author {C.~Hanretty} 
+\affiliation{\FSU}
+\author {N.~Hassall} 
+\affiliation{\ECOSSEG}
+\author {K.~Hicks} 
+\affiliation{\OHIOU}
+\author {M.~Holtrop} 
+\affiliation{\UNH}
+\author {C.E.~Hyde} 
+\affiliation{\ODU}
+\author {Y.~Ilieva} 
+\affiliation{\SCAROLINA}
+\affiliation{\GWU}
+\author {D.G.~Ireland} 
+\affiliation{\ECOSSEG}
+\author {E.L.~Isupov} 
+\affiliation{\MOSCOW}
+\author {J.R.~Johnstone} 
+\affiliation{\ECOSSEG}
+\author {K.~Joo} 
+\affiliation{\UCONN}
+\author {D. ~Keller} 
+\affiliation{\OHIOU}
+\author {M.~Khandaker} 
+\affiliation{\NSU}
+\author {P.~Khetarpal} 
+\affiliation{\RPI}
+\author {W.~Kim} 
+\affiliation{\KYUNGPOOK}
+\author {A.~Klein} 
+\affiliation{\ODU}
+\author {F.J.~Klein} 
+\affiliation{\CUA}
+\author {M.~Kossov} 
+\affiliation{\ITEP}
+
+\author {A.~Kubarovsky} 
+\affiliation{\ODU}
+\author {V.~Kubarovsky} 
+\affiliation{\JLAB}
+\author {S.V.~Kuleshov} 
+\affiliation{\UTFSM}
+\affiliation{\ITEP}
+\author {V.~Kuznetsov} 
+\affiliation{\KYUNGPOOK}
+\author {J.M.~Laget} 
+\affiliation{\JLAB}
+\affiliation{\SACLAY}
+\author {L.~Lesniak}
+\affiliation{\NINP}
+\author {K.~Livingston} 
+\affiliation{\ECOSSEG}
+\author {H.Y.~Lu} 
+\affiliation{\SCAROLINA}
+\author {M.~Mayer} 
+\affiliation{\ODU}
+\author {M.E.~McCracken} 
+\affiliation{\CMU}
+\author {B.~McKinnon} 
+\affiliation{\ECOSSEG}
+\author {C.A.~Meyer} 
+\affiliation{\CMU}
+\author {K.~Mikhailov} 
+\affiliation{\ITEP}
+
+\author {T~Mineeva} 
+\affiliation{\UCONN}
+\author {M.~Mirazita} 
+\affiliation{\INFNFR}
+\author {V.~Mochalov} 
+\affiliation{\IHEP}
+\author {V.~Mokeev} 
+\affiliation{\MOSCOW}
+\affiliation{\JLAB}
+\author {K.~Moriya} 
+\affiliation{\CMU}
+\author {E.~Munevar} 
+\affiliation{\GWU}
+\author {P.~Nadel-Turonski} 
+\affiliation{\CUA}
+\author {I.~Nakagawa} 
+\affiliation{\RIKEN}
+\author {C.S.~Nepali} 
+\affiliation{\ODU}
+\author {S.~Niccolai} 
+\affiliation{\ORSAY}
+\author {I.~Niculescu} 
+\affiliation{\JMU}
+\author {M.R. ~Niroula} 
+\affiliation{\ODU}
+\author {M.~Osipenko} 
+\affiliation{\INFNGE}
+\affiliation{\MOSCOW}
+\author {A.I.~Ostrovidov} 
+\affiliation{\FSU}
+\author {K.~Park} 
+\altaffiliation[Current address:]{\NOWJLAB}
+\affiliation{\SCAROLINA}
+\affiliation{\KYUNGPOOK}
+\author {S.~Park} 
+\affiliation{\FSU}
+\author {M.~Paris} 
+\affiliation{\GWU}
+\affiliation{\JLAB}
+\author {E.~Pasyuk} 
+\affiliation{\ASU}
+\author {S.Anefalos~Pereira} 
+\affiliation{\INFNFR}
+\author {S.~Pisano} 
+\affiliation{\ORSAY}
+\author {N.~Pivnyuk} 
+\affiliation{\ITEP}
+\author {O.~Pogorelko} 
+\affiliation{\ITEP}
+\author {S.~Pozdniakov} 
+\affiliation{\ITEP}
+\author {J.W.~Price} 
+\affiliation{\CSU}
+\author {Y.~Prok} 
+\altaffiliation[Current address:]{\NOWCNU}
+\affiliation{\VIRGINIA}
+\author {D.~Protopopescu} 
+\affiliation{\ECOSSEG}
+\author {B.A.~Raue} 
+\affiliation{\FIU}
+\affiliation{\JLAB}
+\author {G.~Ricco} 
+\affiliation{\INFNGE}
+\author {M.~Ripani} 
+\affiliation{\INFNGE}
+\author {B.G.~Ritchie} 
+\affiliation{\ASU}
+\author {G.~Rosner} 
+\affiliation{\ECOSSEG}
+\author {P.~Rossi} 
+\affiliation{\INFNFR}
+\author {F.~Sabati\'e} 
+\affiliation{\SACLAY}
+\author {M.S.~Saini} 
+\affiliation{\FSU}
+\author {C.~Salgado} 
+\affiliation{\NSU}
+\author {D.~Schott} 
+\affiliation{\FIU}
+\author {R.A.~Schumacher} 
+\affiliation{\CMU}
+\author {H.~Seraydaryan} 
+\affiliation{\ODU}
+\author {Y.G.~Sharabian} 
+\affiliation{\JLAB}
+\author {D.I.~Sober} 
+\affiliation{\CUA}
+\author {D.~Sokhan} 
+\affiliation{\ECOSSEE}
+\author {A.~Stavinsky} 
+\affiliation{\ITEP}
+\author {S.~Stepanyan} 
+\affiliation{\JLAB}
+\author {S.~S.~Stepanyan} 
+\affiliation{\KYUNGPOOK}
+\author {P.~Stoler} 
+\affiliation{\RPI}
+\author {I.I.~Strakovsky} 
+\affiliation{\GWU}
+\author {S.~Strauch} 
+\affiliation{\SCAROLINA}
+\affiliation{\GWU}
+\author {M.~Taiuti} 
+\affiliation{\INFNGE}
+\author {D.J.~Tedeschi} 
+\affiliation{\SCAROLINA}
+\author {A.~Teymurazyan} 
+\affiliation{\UK}
+\author {S.~Tkachenko} 
+\affiliation{\ODU}
+\author {M.~Ungaro} 
+\affiliation{\UCONN}
+\affiliation{\RPI}
+\author {M.F.~Vineyard} 
+\affiliation{\UNIONC}
+\author {A.V.~Vlassov} 
+\affiliation{\ITEP}
+\author {D.P.~Watts} 
+\altaffiliation[Current address:]{\NOWECOSSEE}
+\affiliation{\ECOSSEG}
+\author {L.B.~Weinstein} 
+\affiliation{\ODU}
+\author {D.P.~Weygand} 
+\affiliation{\JLAB}
+\author {M.~Williams} 
+\affiliation{\CMU}
+\author {E.~Wolin} 
+\affiliation{\JLAB}
+\author {M.H.~Wood} 
+\affiliation{\SCAROLINA}
+\author {L.~Zana} 
+\affiliation{\UNH}
+\author {J.~Zhang} 
+\affiliation{\ODU}
+\author {B.~Zhao} 
+\altaffiliation[Current address:]{\NOWWM}
+\affiliation{\UCONN}
+\author {Z.W.~Zhao} 
+\affiliation{\SCAROLINA}
+
+%%\author {K. P. Adhikari} 
+%%\affiliation{\ODU}
+%%\author {M.~Aghasyan} 
+%%\affiliation{\INFNFR}
+%%\author {M.J.~Amaryan} 
+%%\affiliation{\ODU}
+%%%\affiliation{\}
+%%\author {P.~Ambrozewicz} 
+%%\affiliation{\FIU}
+%%%\affiliation{\}
+%%\author {M.~Anghinolfi} 
+%%\affiliation{\INFNGE}
+%%%\affiliation{\}
+%%\author {G.~Asryan} 
+%%\affiliation{\YEREVAN}
+%%%\affiliation{\}
+%%\author {H.~Avakian} 
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%\author {H.~Bagdasaryan} 
+%%\affiliation{\ODU}
+%%\author {N.~Baillie} 
+%%\affiliation{\WM}
+%%%\affiliation{\}
+%%\author {J.P.~Ball} 
+%%\affiliation{%%\aSU}
+%%\author {N.A.~Baltzell} 
+%%\affiliation{\SCAROLINA}
+%%%\affiliation{\}
+%%\author {V.~Batourine} 
+%%\affiliation{\KYUNGPOOK}
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%\author {I.~Bedlinskiy} 
+%%\affiliation{\ITEP}
+%%%\affiliation{\}
+%%\author {M.~Bellis} 
+%%\affiliation{\CMU}
+%%%\affiliation{\}
+%%\author {N.~Benmouna} 
+%%\affiliation{\GWU}
+%%\author {B.L.~Berman} 
+%%\affiliation{\GWU}
+%%\author {L.~Bibrzycki}
+%%\affiliation{\NINP}
+%%\author {A.S.~Biselli} 
+%%\affiliation{\FU}
+%%%\affiliation{\}
+%%\author {C. ~Bookwalter} 
+%%\affiliation{\FSU}
+%%%\affiliation{\}
+%%\author {S.~Bouchigny} 
+%%\affiliation{\ORSAY}
+%%%\affiliation{\}
+%%\author {S.~Boiarinov} 
+%%\affiliation{\JLAB}
+%%\author {R.~Bradford} 
+%%\affiliation{\CMU}
+%%\author {D.~Branford} 
+%%\affiliation{\ECOSSEE}
+%%\author {W.J.~Briscoe} 
+%%\affiliation{\GWU}
+%%\author {W.K.~Brooks} 
+%%\affiliation{\JLAB}
+%%\affiliation{\UTFSM}
+%%%\affiliation{\}
+%%\author {S.~B\"{u}ltmann} 
+%%\affiliation{\ODU}
+%%%\affiliation{\}
+%%\author {V.D.~Burkert} 
+%%\affiliation{\JLAB}
+%%\author {J.R.~Calarco} 
+%%\affiliation{\UNH}
+%%\author {S.L.~Careccia} 
+%%\affiliation{\ODU}
+%%%\affiliation{\}
+%%\author {D.S.~Carman} 
+%%%\affiliation{\OHIOU}
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%\author {L.~Casey} 
+%%\affiliation{\CUA}
+%%%\affiliation{\}
+%%\author {S.~Chen} 
+%%\affiliation{\FSU}
+%%%\affiliation{\}
+%%\author {L.~Cheng} 
+%%\affiliation{\CUA}
+%%%\affiliation{\}
+%%\author {E.~Clinton} 
+%%\affiliation{\UMASS}
+%%\author {P.L.~Cole} 
+%%\affiliation{\ISU}
+%%\author {P.~Collins} 
+%%\affiliation{%%\aSU}
+%%%\affiliation{\}
+%%\author {D.~Crabb} 
+%%\affiliation{\VIRGINIA}
+%%\author {H.~Crannell} 
+%%\affiliation{\CUA}
+%%%\affiliation{\}
+%%\author {V.~Crede} 
+%%\affiliation{\FSU}
+%%%\affiliation{\}
+%%\author {J.P.~Cummings} 
+%%\affiliation{\RPI}
+%%\author {D.~Dale} 
+%%\affiliation{\ISU}
+%%%\affiliation{\}
+%%\author {A.~Daniel} 
+%%\affiliation{\OHIOU}
+%%\author {N.~Dashyan} 
+%%\affiliation{\YEREVAN}
+%%%\affiliation{\}
+%%\author {R.~De~Masi} 
+%%\affiliation{\SACLAY}
+%%%\affiliation{\}
+%%\author {E.~De~Sanctis} 
+%%\affiliation{\INFNFR}
+%%\author {P.V.~Degtyarenko} 
+%%\affiliation{\JLAB}
+%%\author {A.~Deur} 
+%%\affiliation{\JLAB}
+%%\author {S.~Dhamija} 
+%%\affiliation{\FIU}
+%%%\affiliation{\}
+%%\author {K.V.~Dharmawardane} 
+%%\affiliation{\ODU}
+%%%\affiliation{\}
+%%\author {R.~Dickson} 
+%%\affiliation{\CMU}
+%%%\affiliation{\}
+%%\author {C.~Djalali} 
+%%\affiliation{\SCAROLINA}
+%%\author {G.E.~Dodge} 
+%%\affiliation{\ODU}
+%%\author {J.~Donnelly} 
+%%\affiliation{\ECOSSEG}
+%%%\affiliation{\}
+%%\author {D.~Doughty} 
+%%\affiliation{\CNU}
+%%\affiliation{\JLAB}
+%%\author {M.~Dugger} 
+%%\affiliation{%%\aSU}
+%%\author {O.P.~Dzyubak} 
+%%\affiliation{\SCAROLINA}
+%%\author {H.~Egiyan} 
+%%\affiliation{\JLAB}
+%%\affiliation{\UNH}
+%%%\affiliation{\}
+%%\author {K.S.~Egiyan} 
+%%\affiliation{\YEREVAN}
+%%%\affiliation{\}
+%%\author {L.~El~Fassi} 
+%%\affiliation{%%\aNL}
+%%%\affiliation{\}
+%%\author {L.~Elouadrhiri} 
+%%\affiliation{\JLAB}
+%%\author {P.~Eugenio} 
+%%\affiliation{\FSU}
+%%\author {G.~Fedotov} 
+%%\affiliation{\MOSCOW}
+%%%\affiliation{\}
+%%\author {R.~Fersch} 
+%%\affiliation{\WM}
+%%%\affiliation{\}
+%%\author {T.A.~Forest} 
+%%\affiliation{\ISU}
+%%%\affiliation{\}
+%%\author {A.~Fradi} 
+%%\affiliation{\ORSAY}
+%%%\affiliation{\}
+%%\author {M.Y.~Gabrielyan} 
+%%\affiliation{\FIU}
+%%%\affiliation{\}
+%%\author {L.~Gan} 
+%%\affiliation{\UNCW}
+%%\author {M.~Gar\c con} 
+%%\affiliation{\SACLAY}
+%%%\affiliation{\}
+%%\author {A.~Gasparian} 
+%%\affiliation{\UAT}
+%%\author {G.~Gavalian} 
+%%\affiliation{\UNH}
+%%\affiliation{\ODU}
+%%%\affiliation{\}
+%%\author {N.~Gevorgyan} 
+%%\affiliation{\YEREVAN}
+%%%\affiliation{\}
+%%\author {G.P.~Gilfoyle} 
+%%\affiliation{\URICH}
+%%\author {K.L.~Giovanetti} 
+%%\affiliation{\JMU}
+%%%\affiliation{\}
+%%\author {F.X.~Girod} 
+%%\altaffiliation[Current address:]{\NOWJLAB}
+%%\affiliation{\SACLAY}
+%%%\affiliation{\}
+%%\author {O.~Glamazdin} 
+%%\affiliation{\KHARKOV}
+%%\author {J.~Goett} 
+%%\affiliation{\RPI}
+%%\author {J.T.~Goetz} 
+%%\affiliation{\UCLA}
+%%%\affiliation{\}
+%%\author {W.~Gohn} 
+%%\affiliation{\UCONN}
+%%%\affiliation{\}
+%%\author {E.~Golovatch} 
+%%\affiliation{\MOSCOW}
+%%%\affiliation{\}
+%%\author {C.I.O.~Gordon} 
+%%\affiliation{\ECOSSEG}
+%%\author {R.W.~Gothe} 
+%%\affiliation{\SCAROLINA}
+%%\author {L.~Graham} 
+%%\affiliation{\SCAROLINA}
+%%%\affiliation{\}
+%%\author {K.A.~Griffioen} 
+%%\affiliation{\WM}
+%%\author {M.~Guidal} 
+%%\affiliation{\ORSAY}
+%%\author {N.~Guler} 
+%%\affiliation{\ODU}
+%%\author {L.~Guo} 
+%%\altaffiliation[Current address:]{\NOWLANL}
+%%\affiliation{\JLAB}
+%%\author {V.~Gyurjyan} 
+%%\affiliation{\JLAB}
+%%\author {C.~Hadjidakis} 
+%%\affiliation{\ORSAY}
+%%\author {K.~Hafidi} 
+%%\affiliation{%%\aNL}
+%%%\affiliation{\}
+%%\author {H.~Hakobyan} 
+%%\affiliation{\YEREVAN}
+%%\affiliation{\JLAB}
+%%\affiliation{\UTFSM}
+%%%\affiliation{\}
+%%\author {R.S.~Hakobyan} 
+%%\affiliation{\CUA}
+%%%\affiliation{\}
+%%\author {C.~Hanretty} 
+%%\affiliation{\FSU}
+%%%\affiliation{\}
+%%\author {J.~Hardie} 
+%%\affiliation{\CNU}
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%\author {N.~Hassall} 
+%%\affiliation{\ECOSSEG}
+%%%\affiliation{\}
+%%\author {D.~Heddle} 
+%%\affiliation{\CNU}
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%\author {F.W.~Hersman} 
+%%\affiliation{\UNH}
+%%%\affiliation{\}
+%%\author {K.~Hicks} 
+%%\affiliation{\OHIOU}
+%%\author {I.~Hleiqawi} 
+%%\affiliation{\OHIOU}
+%%%\affiliation{\}
+%%\author {M.~Holtrop} 
+%%\affiliation{\UNH}
+%%\author {C.E.~Hyde} 
+%%\affiliation{\ODU}
+%%\author {Y.~Ilieva} 
+%%\affiliation{\GWU}
+%%\affiliation{\SCAROLINA}
+%%%\affiliation{\}
+%%\author {D.G.~Ireland} 
+%%\affiliation{\ECOSSEG}
+%%\author {B.S.~Ishkhanov} 
+%%\affiliation{\MOSCOW}
+%%%\affiliation{\}
+%%\author {E.L.~Isupov} 
+%%\affiliation{\MOSCOW}
+%%%\affiliation{\}
+%%\author {M.M.~Ito} 
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%\author {D.~Jenkins} 
+%%\affiliation{\VT}
+%%\author {H.S.~Jo} 
+%%\affiliation{\ORSAY}
+%%%\affiliation{\}
+%%\author {J.R.~Johnstone} 
+%%\affiliation{\ECOSSEG}
+%%%\affiliation{\}
+%%\author {K.~Joo} 
+%%\affiliation{\UCONN}
+%%\author {H.G.~Juengst} 
+%%\altaffiliation[Current address:]{\NOWCUA}
+%%\affiliation{\GWU}
+%%\affiliation{\ODU}
+%%%\affiliation{\}
+%%\author {T.~Kageya} 
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%\author {N.~Kalantarians} 
+%%\affiliation{\ODU}
+%%%\affiliation{\}
+%%\author {D. ~Keller} 
+%%\affiliation{\OHIOU}
+%%%\affiliation{\}
+%%\author {J.D.~Kellie} 
+%%\affiliation{\ECOSSEG}
+%%%\affiliation{\}
+%%\author {M.~Khandaker} 
+%%\affiliation{\NSU}
+%%\author {P.~Khetarpal} 
+%%\affiliation{\RPI}
+%%%\affiliation{\}
+%%\author {W.~Kim} 
+%%\affiliation{\KYUNGPOOK}
+%%\author {A.~Klein} 
+%%\affiliation{\ODU}
+%%\author {F.J.~Klein} 
+%%\affiliation{\CUA}
+%%\author {A.V.~Klimenko} 
+%%\affiliation{\ODU}
+%%%\affiliation{\}
+%%\author {P.~Konczykowski} 
+%%\affiliation{\SACLAY}
+%%%\affiliation{\}
+%%\author {M.~Kossov} 
+%%\affiliation{\ITEP}
+%%\author {Z.~Krahn} 
+%%\affiliation{\CMU}
+%%\author {L.H.~Kramer} 
+%%\affiliation{\FIU}
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%\author {V.~Kubarovsky} 
+%%\affiliation{\RPI}
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%\author {J.~Kuhn} 
+
+%%\affiliation{\CMU}
+%%\author {S.E.~Kuhn} 
+%%\affiliation{\ODU}
+%%\author {S.V.~Kuleshov} 
+%%\affiliation{\ITEP}
+%%\affiliation{\UTFSM}
+%%%\affiliation{\}
+%%\author {V.~Kuznetsov} 
+%%\affiliation{\KYUNGPOOK}
+%%%\affiliation{\}
+%%\author {J.~Lachniet} 
+%%\affiliation{\CMU}
+%%\affiliation{\ODU}
+%%%\affiliation{\}
+%%\author {J.M.~Laget} 
+%%\affiliation{\SACLAY}
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%\author {J.~Langheinrich} 
+%%\affiliation{\SCAROLINA}
+%%\author {D.~Lawrence} 
+%%\affiliation{\UMASS}
+%%\author {T.~Lee} 
+%%\affiliation{\UNH}
+%%%\affiliation{\}
+%%\author {L.~Lesniak}
+%%\affiliation{\NINP}
+%%\author {Ji~Li} 
+%%\affiliation{\RPI}
+%%\author {K.~Livingston} 
+%%\affiliation{\ECOSSEG}
+%%\author {M.~Lowry} 
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%\author {H.Y.~Lu} 
+%%\affiliation{\SCAROLINA}
+%%%\affiliation{\}
+%%\author {M.~MacCormick} 
+%%\affiliation{\ORSAY}
+%%%\affiliation{\}
+%%\author {S.~Malace} 
+%%\affiliation{\SCAROLINA}
+%%%\affiliation{\}
+%%\author {N.~Markov} 
+%%\affiliation{\UCONN}
+%%%\affiliation{\}
+%%\author {P.~Mattione} 
+%%\affiliation{\RICE}
+%%%\affiliation{\}
+%%\author {M.E.~McCracken} 
+%%\affiliation{\CMU}
+%%%\affiliation{\}
+%%\author {B.~McKinnon} 
+%%\affiliation{\ECOSSEG}
+%%%\affiliation{\}
+%%\author {B.A.~Mecking} 
+%%\affiliation{\JLAB}
+%%\author {J.J.~Melone} 
+%%\affiliation{\ECOSSEG}
+%%\author {M.D.~Mestayer} 
+%%\affiliation{\JLAB}
+%%\author {C.A.~Meyer} 
+%%\affiliation{\CMU}
+%%\author {T.~Mibe} 
+%%\affiliation{\OHIOU}
+%%%\affiliation{\}
+%%\author {K.~Mikhailov} 
+%%\affiliation{\ITEP}
+%%\author {T~Mineeva} 
+%%\affiliation{\UCONN}
+%%%\affiliation{\}
+%%\author {R.~Minehart} 
+%%\affiliation{\VIRGINIA}
+%%%\affiliation{\}
+%%\author {M.~Mirazita} 
+%%\affiliation{\INFNFR}
+%%%\affiliation{\}
+%%\author {R.~Miskimen} 
+%%\affiliation{\UMASS}
+%%%\affiliation{\}
+%%\author {V.~Mochalov} 
+%%\affiliation{\IHEP}
+%%\author {V.~Mokeev} 
+%%\affiliation{\MOSCOW}
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%%%\author {L.~Morand} 
+%%%%\affiliation{\SACLAY}
+%%\author {B.~Moreno} 
+%%\affiliation{\ORSAY}
+%%%\affiliation{\}
+%%\author {K.~Moriya} 
+%%\affiliation{\CMU}
+%%%\affiliation{\}
+%%\author {S.A.~Morrow} 
+%%\affiliation{\ORSAY}
+%%\affiliation{\SACLAY}
+%%%\affiliation{\}
+%%\author {M.~Moteabbed} 
+%%\affiliation{\FIU}
+%%%\affiliation{\}
+%%\author {E.~Munevar} 
+%%\affiliation{\GWU}
+%%%\affiliation{\}
+%%\author {G.S.~Mutchler} 
+%%\affiliation{\RICE}
+%%\author {P.~Nadel-Turonski} 
+%%\affiliation{\CUA}
+%%%\affiliation{\}
+%%\author {I.~Nakagawa} 
+%%\affiliation{\RIKEN}
+%%\author {R.~Nasseripour} 
+%%\altaffiliation[Current address:]{\NOWGWU}
+%%\affiliation{\FIU}
+%%\affiliation{\SCAROLINA}
+%%%\affiliation{\}
+%%\author {S.~Niccolai} 
+%%\affiliation{\ORSAY}
+%%%\affiliation{\}
+%%\author {G.~Niculescu} 
+%%\affiliation{\JMU}
+%%%\affiliation{\}
+%%\author {I.~Niculescu} 
+%%\affiliation{\JMU}
+%%\author {B.B.~Niczyporuk} 
+%%\affiliation{\JLAB}
+%%\author {M.R. ~Niroula} 
+%%\affiliation{\ODU}
+%%%\affiliation{\}
+%%\author {R.A.~Niyazov} 
+%%\affiliation{\JLAB}
+%%\affiliation{\RPI}
+%%%\affiliation{\}
+%%\author {M.~Nozar} 
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%\author {M.~Osipenko} 
+%%\affiliation{\INFNGE}
+%%%\affiliation{\}
+%%\affiliation{\MOSCOW}
+%%\author {A.I.~Ostrovidov} 
+%%\affiliation{\FSU}
+%%\author {K.~Park} 
+%%\affiliation{\KYUNGPOOK}
+%%\affiliation{\SCAROLINA}
+%%%\affiliation{\}
+%%\author {S.~Park} 
+%%\affiliation{\FSU}
+%%%\affiliation{\}
+%%\author {E.~Pasyuk} 
+%%\affiliation{%%\aSU}
+%%\author {M.~Paris} 
+%%\affiliation{\GWU}
+%%\affiliation{\JLAB}
+%%\author {C.~Paterson} 
+%%\affiliation{\ECOSSEG}
+%%%\affiliation{\}
+%%\author {S.~Anefalos~Pereira} 
+%%\affiliation{\INFNFR}
+%%%\affiliation{\}
+%%\author {J.~Pierce} 
+%%\affiliation{\VIRGINIA}
+%%%\affiliation{\}
+%%\author {N.~Pivnyuk} 
+%%\affiliation{\ITEP}
+%%\author {D.~Pocanic} 
+%%\affiliation{\VIRGINIA}
+%%%\affiliation{\}
+%%\author {O.~Pogorelko} 
+%%\affiliation{\ITEP}
+%%\author {S.~Pozdniakov} 
+%%\affiliation{\ITEP}
+%%\author {J.W.~Price} 
+%%\affiliation{\CSU}
+%%%\affiliation{\}
+%%%%\author {S.~Procureur} 
+%%%%\affiliation{\SACLAY}
+%%%\affiliation{\}
+%%\author {Y.~Prok} 
+%%\affiliation{\CNU}
+%%%\affiliation{\}
+%%\author {D.~Protopopescu} 
+%%\affiliation{\ECOSSEG}
+%%\author {B.A.~Raue} 
+%%\affiliation{\FIU}
+%%\affiliation{\JLAB}
+%%\author {G.~Riccardi} 
+%%\affiliation{\FSU}
+%%%\affiliation{\}
+%%\author {G.~Ricco} 
+%%\affiliation{\INFNGE}
+%%\author {M.~Ripani} 
+%%\affiliation{\INFNGE}
+%%\author {B.G.~Ritchie} 
+%%\affiliation{%%\aSU}
+%%%%\author {F.~Ronchetti} 
+%%%%\affiliation{\INFNFR}
+%%%\affiliation{\}
+%%\author {G.~Rosner} 
+%%\affiliation{\ECOSSEG}
+%%%\affiliation{\}
+%%\author {P.~Rossi} 
+%%\affiliation{\INFNFR}
+%%\author {F.~Sabati\'e} 
+%%\affiliation{\SACLAY}
+%%\author {M.S.~Saini} 
+%%\affiliation{\FSU}
+%%%\affiliation{\}
+%%\author {J.~Salamanca} 
+%%\affiliation{\ISU}
+%%%\affiliation{\}
+%%\author {C.~Salgado} 
+%%\affiliation{\NSU}
+%%\author {A.~Sandorfi} 
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%\author {J.P.~Santoro} 
+%%\affiliation{\VT}
+%%\affiliation{\CUA}
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%\author {V.~Sapunenko} 
+%%\affiliation{\JLAB}
+%%\author {D.~Schott} 
+%%\affiliation{\FIU}
+%%%\affiliation{\}
+%%\author {R.A.~Schumacher} 
+%%\affiliation{\CMU}
+%%\author {V.S.~Serov} 
+%%\affiliation{\ITEP}
+%%\author {Y.G.~Sharabian} 
+%%\affiliation{\JLAB}
+%%\author {D.~Sharov} 
+%%\affiliation{\MOSCOW}
+%%%\affiliation{\}
+%%\author {N.V.~Shvedunov} 
+%%\affiliation{\MOSCOW}
+%%%\affiliation{\}
+%%\author {E.S.~Smith} 
+%%\affiliation{\JLAB}
+%%\author {L.C.~Smith} 
+%%\affiliation{\VIRGINIA}
+%%%\affiliation{\}
+%%\author {D.I.~Sober} 
+%%\affiliation{\CUA}
+%%\author {D.~Sokhan} 
+%%\affiliation{\ECOSSEE}
+%%%\affiliation{\}
+%%\author {A. Starostin} 
+%%\affiliation{\UCLA}
+%%%\affiliation{\}
+%%\author {A.~Stavinsky} 
+%%\affiliation{\ITEP}
+%%\author {S.~Stepanyan} 
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%\author {S.S.~Stepanyan} 
+%%\affiliation{\KYUNGPOOK}
+%%\author {B.E.~Stokes} 
+%%\affiliation{\FSU}
+%%\affiliation{\GWU}
+%%%\affiliation{\}
+%%\author {P.~Stoler} 
+%%\affiliation{\RPI}
+%%\author {K.~A.~Stopani} 
+%%\affiliation{\MOSCOW}
+%%%\affiliation{\}
+%%\author {I.I.~Strakovsky} 
+%%\affiliation{\GWU}
+%%\author {S.~Strauch} 
+%%\affiliation{\GWU}
+%%\affiliation{\SCAROLINA}
+%%%\affiliation{\}
+%%\author {M.~Taiuti} 
+%%\affiliation{\INFNGE}
+%%\author {D.J.~Tedeschi} 
+%%\affiliation{\SCAROLINA}
+%%\author {A.~Teymurazyan} 
+%%\affiliation{\UK}
+%%\author {A.~Tkabladze} 
+%%\affiliation{\OHIOU}
+%%\affiliation{\GWU}
+%%%\affiliation{\}
+%%\author {S.~Tkachenko} 
+%%\affiliation{\ODU}
+%%%\affiliation{\}
+%%\author {L.~Todor} 
+%%\affiliation{\URICH}
+%%%\affiliation{\}
+%%\author {C.~Tur} 
+%%\affiliation{\SCAROLINA}
+%%%\affiliation{\}
+%%\author {M.~Ungaro} 
+%%\affiliation{\RPI}
+%%\affiliation{\UCONN}
+%%\author {M.F.~Vineyard} 
+%%\affiliation{\UNIONC}
+%%\author {A.V.~Vlassov} 
+%%\affiliation{\ITEP}
+%%\author {D.P.~Watts} 
+%%\affiliation{\ECOSSEE}
+%%%\affiliation{\}
+%%\author {X.~Wei} 
+%%\affiliation{\JLAB}
+%%%\affiliation{\}
+%%\author {L.B.~Weinstein} 
+%%\affiliation{\ODU}
+%%\author {D.P.~Weygand} 
+%%\affiliation{\JLAB}
+%%\author {M.~Williams} 
+%%\affiliation{\CMU}
+%%\author {E.~Wolin} 
+%%\affiliation{\JLAB}
+%%\author {M.H.~Wood} 
+%%\affiliation{\SCAROLINA}
+%%\author {A.~Yegneswaran} 
+%%\affiliation{\JLAB}
+%%\author {M.~Yurov} 
+%%\affiliation{\KYUNGPOOK}
+%%%\affiliation{\}
+%%\author {L.~Zana} 
+%%\affiliation{\UNH}
+%%\author {J.~Zhang} 
+%%\affiliation{\ODU}
+%%%\affiliation{\}
+%%\author {B.~Zhao} 
+%%\affiliation{\UCONN}
+%%%\affiliation{\}
+%%\author {Z.W.~Zhao} 
+%%\affiliation{\SCAROLINA}
+%\affiliation{\}
+\collaboration{The CLAS Collaboration}
+   \noaffiliation
+% 
+
+%The Southeastern Universities Research Association (SURA) operates the 
+%Thomas Jefferson National Accelerator Facility for the United States 
+%Department of Energy under contract DE-AC05-84ER40150. 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\date{\today, Version 1.0}
+
+
+
+\begin{abstract}
+The exclusive reaction $\gamma p \to p K^+ K^-$  was studied 
+in the photon energy range 3.0 - 3.8 GeV and momentum transfer range  $0.6<-t<1.3$~GeV$^2$.
+Data were collected with the 
+CLAS detector at the Thomas Jefferson National Accelerator Facility. In this kinematic range
+the integrated luminosity was about  20 pb$^{-1}$.
+The  reaction was isolated by detecting the K$^+$ and proton in CLAS,
+and reconstructing the  K$^-$ via the missing-mass technique. Moments of the di-kaon decay angular distributions
+were derived from the experimental data. Differential cross sections for 
+the $S$ and $P$-waves in the $M_{K^+K^-}$ mass range $0.99-1.365$~GeV
+were derived performing a  partial wave expansion of the extracted  moments. 
+Besides the dominant  contribution of the $\phi$ meson in the $P$-wave, 
+evidence for the $S-P$ waves interference  was found.
+The differential production cross sections $d\sigma/dt$ for individual waves  in the mass range of 
+the $\phi$ meson were extracted and compared to predictions of a Regge-inspired model that include all possible amplitudes (4 and 12 for the $S-$ and the $P-wave$ respectively). 
+This is the first time that the  $S-$wave contribution to the elastic $K^+K^-$ photoproduction has been measured.
+\end{abstract}
+\pacs{13.60.Le,14.40.Cs,11.80.Et} 
+\keywords{Partial wave analysis, photo-production, scalar meson, exclusive reaction}
+
+\maketitle
+
+\section{\label{sec:intro}Introduction}
+Most of our knowledge on the light quark meson spectrum comes from
+hadron induced reactions, using typically, K, $\pi$, p or $\bar p$ beams, and studying  the  decays of various mesons,
+e.g. $\phi$, $J/\Psi$, $D$ and $B$.
+Very few studies were attempted with electromagnetic probes, in particular real photons,  since their production 
+cross sections are relatively small compared to the dominant production 
+of vector mesons. On one hand, through vector meson dominance,
+the photon can be decomposed into a sum over vector
+mesons. This seems to saturate rapidly and thus can be described in
+terms of Regge amplitudes for vector meson nucleon scattering. On the
+other side, quark-hadron duality and the point-like nature of the photon
+coupling makes it possible to describe photo-hadron interactions at the
+QCD level. For example, radiative decays of resonances, which directly
+probe the QCD structure of hadrons, may be accessible through photoproduction
+provided the resonance production mechanisms can be isolated
+from coherent backgrounds. Extraction of resonance parameters from the
+data requires amplitude analysis and understanding of background processes.\\
+There have been few comprehensive programs exploring photoproduction,
+however this is changing thanks to the high-intensity and high-quality tagged-photon beams and the high quality
+data recently accumulated at lower
+energies by CB-ELSA~\cite{elsa} and CB-MAMI~\cite{mami}, 
+at high energies by JLab-CLAS~\cite{clas}  and the new experimental programs just launched in the same laboratory,
+such as GLUEX~\cite{gluex} in Hall-D and MesonEx  ~\cite{mesonex} min Hall-B.
+The typical data sets from the
+past experiments in the energy range below 20 GeV (typical for meson
+spectroscopy experiments) have tens of thousands of events, and only a
+few topologies have been studied\cite{Ballam73,Aston80,Fries78}. 
+In contrast, the data samples from
+the $g11$  run at CLAS exceed the existing sets in many channels by at
+least an order of magnitude, and several reconstructed topologies enable
+a comprehensive study.\\
+Two hadrons photoproduction (two-pion and two-kaon) offers the possibility of investigating various aspects of the  meson resonance spectrum. 
+It couples to the scalar-isoscalar channel that contains the $\sigma$,  the $\kappa$, the $f_0(980)$, the $a_0(980)$ and possibly a few 
+more resonances with masses below $2\mbox{ GeV}$. 
+Two-pion is the main decay mode of the  lowest isoscalar-tensor $f_2(1270)$ resonance and it is 
+the only decay mode of the isovector-vector resonance, the $\rho(770)$. 
+Two-kaon channel is the the main decay mode of the isoscalar-vector $\phi(1020)$
+and a possible sub-threshold decay of the isoscalar-scalar(vector) $f_0(980)$ and  isovector-scalar $a_0(980)$ .
+Nowadays the other resonances too are subjects of  extensive theoretical and experimental investigation.
+The $\sigma$ meson is now established
+with  pole mass and width determined with good accuracy~\cite{Caprini:2005zr,Kaminski:2006qe,Kaminski:2006yv} while 
+the nature (or even the existence) of the $\kappa$ meson is still under debate~\cite{kappa}.
+The $f_0(980)$ is even a  more enigmatic state: its experimental determination is  complicated by its proximity to the $K{\bar K}$ threshold,
+and its  QCD nature still awaits an explanation~\cite{Bugg:2004xu}.\\
+Theoretical models for  $K^+K^-$ photoproduction have been investigated in a series of articles. 
+{\it TO BE COMPLETED.}\\
+Information about the $S$-wave strength can be extracted 
+by performing a partial wave analysis.
+Angular distributions of photoproduced mesons and related observables, such as the  moments of the angular distributions
+ and  the density matrix elements,  are the most effective tools
+to look for interference patterns. 
+An interference between the $S$-wave and the dominant $P$-wave
+was discovered in  the moment analysis of $K^+K^-$ photoproduction on hydrogen, analyzing the data collected 
+in the experiments performed at DESY~\cite{Behrend} 
+and Daresbury~\cite{Barber}.
+
+In this paper we review the results of the analysis of 
+ $K^+K^-$ photoproduction in the photon energy range 3.0 - 3.8 GeV and momentum transfer 
+squared $-t$  between 0.6~GeV$^2$ and 1.3~GeV$^2$, where
+the di-kaon effective mass $M_{KK}$ varies from 0.99 GeV to  1.365 GeV. 
+This effective mass region is dominated by the production of the $\phi(1020)$ resonance in the $P$-wave. 
+Results obtained from the the two pion photo production from the same data set  has already been published in this journal~\cite{f0-clas,2pi-clas}.
+and, since the phenomenological analysis will follow closely that reported in the same papers, we refer to them for a detailed description of the analysis procedure.\\
+In the following, some details are given on the experiment and data analysis (Sec.~\ref{sec:exp}),
+on the extraction of the angular moments of the di-kaon system (Sec.~\ref{sec:mom}), and the 
+fit of the moments using a Regge-inspired phenomenological model (Sec.~\ref{sec:disp}).
+Results of the partial wave analysis (differential cross section for each partial wave
+and the physics interpretation are reported in Sec.~\ref{sec:res}.
+
+\section{\label{sec:exp} Experimental procedures and data analysis}
+\subsection{The photon beam and the target}
+The measurement   was performed using the CLAS detector~\cite{B00} 
+in  Hall B at Jefferson Lab with a bremsstrahlung 
+photon beam  produced by a continuous 60-nA electron beam of energy  $E_0$ = 4.02 GeV  
+impinging on a gold foil of thickness $8 \times 10^{-5}$ radiation lengths.
+A bremsstrahlung tagging system~\cite{SO99} with a photon energy resolution of 0.1$\%$ $E_0$ 
+was used to tag photons in the energy range from 1.6 GeV
+to a maximum energy of 3.8 GeV. In this analysis only the high-energy 
+part of the photon spectrum, ranging from 3.0 to 3.8 GeV, was used.
+$e^+$ $e^-$ pairs produced by the interaction of the  photon beam on a thin gold foil were used
+to continuously monitor the photon flux  during the experiment. Absolute normalization was obtained by comparing 
+the $e^+$ $e^-$ pair rate with the photon flux measured by a total absorption lead-glass counter in dedicated
+low-intensity runs.
+The  energy calibration of the Hall-B tagger system
+was performed both by a direct measurement of the $e^+e^-$ pairs produced by the incoming photons~\cite{tag-abs_cal}
+and by applying  an over-constrained kinematic fit  to the  reaction $\gamma p \to p \pi^+ \pi^-$, where all particles
+in the final state were detected in CLAS~\cite{tag-kinefit}.
+The quality of the calibrations was checked by 
+looking at  the mass  of known particles, as well as their dependence on  other kinematic variables 
+(photon energy, detected particle momenta and angles).
+
+The target cell, a Mylar  cylinder  4 cm in diameter and 40-cm long, was filled by liquid hydrogen at 20.4 K.
+The luminosity was obtained as the product of the target density, 
+target length and the incoming photon flux 
+corrected for data-acquisition dead time.
+The overall   systematic uncertainty on the run  luminosity was estimated to be in the range of  10$\%$,
+dominated by the uncertainties on the photon flux.
+
+\subsection{The CLAS detector}
+Outgoing  hadrons were detected in the CLAS  spectrometer.
+Momentum information for charged particles was obtained via tracking
+through three regions of multi-wire drift chambers~\cite{DC} within  a toroidal magnetic 
+field ($\sim 0.5$ T) generated by six superconducting coils. 
+The polarity of the field was set to bend the positive particles away from the beam line  into the acceptance 
+of the  detector.
+Time-of-flight scintillators (TOF) were used for charged hadron
+identification~\cite{Sm99}. 
+The interaction time between the incoming photon and the target
+was measured by  the start counter (ST)~\cite{ST}. This   is
+made of 24 strips of 2.2-mm thick plastic scintillator surrounding the hydrogen cell
+with a single-ended PMT-based read-out. 
+A time resolution of $\sim$300 ps  was achieved.
+
+The CLAS momentum resolution, $\sigma_p/p$, ranges from 0.5 to 1\%, depending on
+the kinematics. 
+The detector geometrical acceptance for each positive particle in the 
+relevant kinematic region is about 40\%. It is somewhat less for low-energy negative 
+hadrons, which can be lost at  forward angles because
+their paths are bent toward the beam line and out of the acceptance
+by the toroidal field.
+Coincidences between the photon tagger and the CLAS detector triggered 
+the recording of the events. The trigger in CLAS  required
+a coincidence between the TOF and the ST 
+in at least two sectors, in order to  select
+reactions with at least two charged particles in the final state.
+An integrated luminosity of 70 pb$^{-1}$ ($\sim20$ pb$^{-1}$ in the range 3.0$<E_\gamma<$3.8 GeV)
+was accumulated in  50 days of running  in 2004. 
+
+
+\subsection{Data analysis and reaction identification}\label{ssec:reac_id}
+The raw data were passed through the standard CLAS reconstruction software to determine the four-momenta of detected particles.
+In this phase of the analysis, corrections were applied to account for the energy loss of charged particles in the target and 
+surrounding  materials, misalignments of the  drift chamber's positions, and 
+uncertainties in the value of the toroidal magnetic field.\\
+\begin{figure}[h!] 
+\center
+\includegraphics[width=0.48\textwidth]{figs/missmass.pdf} 
+\caption{\label{fig:pid}}
+\end{figure}
+
+The reaction $\gamma p \to p K^+ K^-$ was isolated detecting the  proton and the $K^+$ in the CLAS spectrometer,
+while the  $K^-$ was reconstructed from the four-momenta of the detected particles by using the missing-mass technique.
+In this way the exclusivity of the reaction is ensured,  
+keeping the contamination from pion misidentification and   multi-kaon  background to a minimum ($\sim10-15\%)$. Figure~\ref{fig:pid}
+shows the $K^-$ missing mass squared.
+The  background below the missing pion peak appears as a smooth contribution 
+in the $KK$ invariant mass without creating narrow structures.
+\begin{figure}[h!] 
+\center
+\includegraphics[width=0.48\textwidth]{figs/invmass.pdf} 
+\caption{\label{fig:pid}}
+\end{figure}
+To avoid  edge regions in the  detector acceptance, only events within a {\it fiducial} volume were retained in this analysis.
+In the laboratory reference system, cuts were defined for
+the minimum hadron momentum ($p_{proton}>0.32$~GeV and $p_{K^+}>0.125$~GeV), and the minimum  
+azimuthal angles ($\theta_{proton} >10^\circ$ and $\theta_{K^+} >5^\circ$). 
+The  {\it fiducial} cuts  were defined comparing in detail the experimental data distributions with the results of  the detector  simulation.
+The minimum momentum cuts were tuned for different hadrons to take into account the energy loss by ionization of the particles.\\
+After all cuts, 0.2M  events were identified as produced in the exclusive reaction   $\gamma p \to p K^+ K^-$.
+The other event topologies, with at least two hadrons in the final state ($p K^-$, $K^+K^-$,
+$p K^+  K^-$), were not used since in the kinematics of interest for this analysis ($-t<1.3$~GeV$^2$),
+the collected data are  about one  order of magnitude less due to the detector acceptance.
+Figure ~\ref{fig:invmasses} shows the invariant mass spectra of $pK^-$ and $K^+K^-$ in the final state.\\
+The $\phi(1020)$ dominates the $K K$ spectrum and  the $\Lambda(1520)$ peak is clearly visible in the $p K^-$
+invariant mass. Figure 2 shows  that no overlap between the prominent peak of the $\Lambda(1520)$ and the $K K$ spectrum occurs for 
+$M_{KK}<1.25$ GeV. Nevertheless, a sharp cut for $M_{pK^-}<1.6$ GeV has been applied to avoid any contamination in the meson spectrum from the    $\Lambda(1520)$.
+A hint of excited $\Lambda$ states is visible in the scatter plot but their contribution to the $KK$ spectrum is negligible, indeed resulting in a smooth contribution. 
+
+
+
+
+
+
+\section{\label{sec:mom} Moments of the di-kaon angular distribution}\label{par:fin_results} 
+In this section we consider the analysis of moments of the  di-kaon angular distribution defined as:
+\begin{equation}\label{eq:mom}
+\langle Y_{\l\m} \rangle(E_\gamma,t,M_{KK}) = \sqrt{4\pi} \int d\Omega_K  {{d\sigma} \over {dt dM_{KK} d\Omega_K}} Y_{\l\m}(\Omega_K),
+\end{equation} 
+where $d\sigma$ is the differential cross section (in momentum transfer $t$ and di-kaon invariant mass $M_{KK}$), $Y_{\l\m}$ are
+spherical harmonic functions of degree $\l$ and order $\m$,  and 
+$\Omega_K = (\theta_K , \phi_K)$ are the polar and azimuthal angles of the $K^+$ flight direction
+in the $K^+K^-$ helicity rest frame. For the definition of the angles in the di-kaonn system we follow the convention used for the $\pi \pi$ photo production of  Ref.~\cite{Ballam_1}.
+It follows from  Eq.~\ref{eq:mom} that,
+for a given $E_\gamma,t$ and di-kaon mass $M_{KK}$,
+$\langle Y_{00}\rangle$ corresponds to the di-kaon production  differential 
+cross section $d\sigma/dtdM_{KK}$. 
+
+There are many advantages in defining and analyzing moments rather than proceeding via a direct partial wave fit of the angular distributions.
+Moments  can  be  expressed as bi-linear in terms of the partial waves and, 
+depending on the particular combination of $L$ and $M$,  show specific sensitivity to  a particular subset of them.
+In addition, they can be directly and
+unambiguously derived from the data, allowing for a quantitative comparison to the same observables calculated in specific theoretical models.
+
+Extraction of moments requires that the measured angular distribution is corrected by the detector acceptance.
+We studied four methods for implementing
+acceptance corrections. The first one (M1) is to bin the data and Monte Carlo simulations (MC) in all
+kinematical variables and divide data by acceptance. The advantage of this
+method is that it enables theoretical analysis of the data without having to
+deal with the large MC files. It is, however, expected not to be reliable in bins
+where acceptance is small or vanishing.
+A second method (M2) uses linear algebra
+techniques to set up an over-determined system of equations for the moments.
+In the other two methods, moments are expanded  in a model-independent way in a set of basis functions
+and after weighting with MC, are compared to the data by maximizing a likelihood
+function. The  first of these two methods (M3) parametrizes the distributions
+in terms of moments directly while the second method (M4) uses amplitudes. The
+approximations in these methods have to do with the choice of the basis and
+depend on the number of basis functions used.
+The systematic effect of such truncations was studied and the main results are reported below.
+While all four methods produce consistent moments, the moments from methods
+M1 and M2 are not as stable or as reliable as the maximum likelihood methods
+M3 and M4. 
+Since M1 and M2 were found  to be not reliable in bins  where the acceptance was small or vanishing, these methods  were only used as a check of the others and were not included in the  final determination of the experimental moments.
+All details about moment extractions are reported in Refs.~\cite{,2pi-clas,sal-note}.
+
+\subsection{Detector efficiency}
+The CLAS detection efficiency for the reaction  $\gamma p \to p K^+K^-$ was obtained by means of detailed Monte Carlo 
+studies, which included knowledge of the full detector geometry and a realistic response to traversing particles. Events were generated 
+according  to three-particle phase space with a  bremsstrahlung photon energy spectrum.
+%\begin{eqnarray}
+%{{dN} \over {dE_\gamma dt dM_{\pi\pi} d\Omega_\pi d\phi_{cm}}}\propto  
+%%{{\rho(E)} \over {\sqrt{s} p_L }}   \sqrt{ {{M^2} \over 4} - m_\pi^2 }  \propto 
+% { \rho(E_\gamma)}  \sqrt{ {{M_{\pi\pi}^2} \over 4} - m_\pi^2 }. \label{Nraw}
+% \end{eqnarray}
+%Here $\phi_{cm}$ is the azimuthal angle of the di-pion system in the center of mass frame,
+%$\Omega_\pi$ is the $\pi^+$ decay solid angle as discussed above and  $\rho(E_\gamma) \sim 1/E_\gamma$ describes the photon spectrum. 
+A total  of 96 M  events were generated in the energy range  3.0 GeV $< E_\gamma <$  3.8 GeV  and covered
+the allowed kinematic  range in $-t$ and $M_{KK}$. About 19 M  events were reconstructed 
+in the $M_{KK}$ and $-t$ ranges of interest
+(0.99 GeV $< M_K<$ 1.365 GeV , 0.6 GeV$^2< -t < $ 1.3 GeV$^2$). 
+This corresponds to more than 400 times the  statistics collected in the experiment, thereby introducing a negligible 
+statistical uncertainty with respect to the statistical  uncertainty of the data. 
+
+\begin{figure}
+\includegraphics[width=0.42\textwidth]{figs/y00.pdf} 
+\includegraphics[width=0.42\textwidth]{figs/y10.pdf} 
+\includegraphics[width=0.42\textwidth]{figs/y11.pdf} 
+\includegraphics[width=0.42\textwidth]{figs/y20.pdf} 
+\caption[]{Moments of the di-kaon angular distribution  in $3.0 <E_\gamma< 3.8$~GeV 
+and $-t=0.45\pm0.05$~GeV$^2$ (black), $-t=0.65\pm0.05$~GeV$^2$ (red) and $-t=0.95\pm0.05$~GeV$^2$ (blue). Error bars include both statistical and systematic uncertainties as explained in the text.}
+\label{fig:final-2}
+\end{figure}
+\begin{figure}
+\includegraphics[width=0.42\textwidth]{figs/y21.pdf} 
+\includegraphics[width=0.42\textwidth]{figs/y22.pdf} 
+\includegraphics[width=0.42\textwidth]{figs/y30.pdf} 
+\includegraphics[width=0.42\textwidth]{figs/y31.pdf} 
+\caption[]{Moments of the di-kaon angular distribution  in $3.0 <E_\gamma< 3.8$~GeV 
+and $-t=0.45\pm0.05$~GeV$^2$ (black), $-t=0.65\pm0.05$~GeV$^2$ (red) and $-t=0.95\pm0.05$~GeV$^2$ (blue). Error bars include both statistical and systematic uncertainties as explained in the text. }
+\label{fig:final-3}
+\end{figure}
+\begin{figure}
+\includegraphics[width=0.42\textwidth]{figs/y32.pdf} 
+\includegraphics[width=0.42\textwidth]{figs/y40.pdf} 
+\includegraphics[width=0.42\textwidth]{figs/y41.pdf} 
+\includegraphics[width=0.42\textwidth]{figs/y42.pdf} 
+\caption[]{Moments of the di-kaon angular distribution  in $3.0 <E_\gamma< 3.8$~GeV 
+and $-t=0.45\pm0.05$~GeV$^2$ (black), $-t=0.65\pm0.05$~GeV$^2$ (red) and $-t=0.95\pm0.05$~GeV$^2$ (blue). Error bars include both statistical and systematic uncertainties as explained in the text.}
+\label{fig:final-4}
+\end{figure}
+
+\subsection{Extraction of the moments via likelihood fit of experimental data}
+Moments were derived from the data using detector efficiency-corrected fitting functions.
+As mentioned above, the expected theoretical  yield was parametrized in terms of appropriate physics functions: production amplitudes
+in one case and  moments of the cross section in the other. The theoretical expectation, after correction  for acceptance, 
+was  compared to the experimental yield. 
+Parameters were extracted by maximizing a likelihood function defined as:
+\begin{equation}
+{\cal L} \sim   \Pi_{a=1}^n  \left[ {\eta(\tau_a){I(\tau_a) } \over {\int d\tau \eta(\tau) I(\tau) }} \right]. 
+\end{equation} 
+Here  $a$ represents a data event, $n = \Delta N$ is the number of data events in a given $(E_\gamma,-t,M_{KK})$ bin ({\it i.e.}
+the fit is done independently in each bin), $\tau_a$ represents  the set of kinematical variables of the $a^{th}$ event,
+ $\eta(\tau_a)$ is the corresponding acceptance derived by Monte Carlo simulations  and $I(\tau_a)$ is the theoretical 
+function representing the expected event distribution.
+The measure $d\tau$ includes the phase space factor and the likelihood function is normalized to the expected number of events in the bin
+\begin{equation} 
+{\bar n} = \int d\tau \eta(\tau) I(\tau). 
+\end{equation} 
+The advantage of this approach lies in avoiding binning the data and the large uncertainties related to the corrections
+in  regions of CLAS with vanishing efficiencies. Comparison of the results of the two different parametrizations 
+allows one to estimate the systematic uncertainty related to the procedure.
+A detailed description of the two approaches is reported in Ref.~\cite{2pi-clas}.
+
+
+\subsection{Methods comparison and final results}\label{sec:final_moments}
+Moments derived by the different procedures agreed qualitatively.
+In particular, the four methods are consistent in the range of interest from 0.99 GeV $< M_{KK}<$ 1.075 GeV  (and 0.6 GeV$^2< -t < $ 1.3 GeV$^2$). We do not use the region $M_{KK}>$ 1.075 GeV 
+to extract amplitude information because  moments do not show any significant structures and  the choice of waves parametrisations (see Sec.~\ref{sec:amplitudes}) is only valid in proximity of 
+$\phi(1020)$ meson mass. 
+The difference between  the fit results of M3 and M4 is used to evaluate the systematic error 
+associated with the moments extraction. 
+The final results are  given as the  average of 
+M3 (parametrization with moments) and M4 (parametrization with amplitudes) with the two fit initializations:
+\begin{equation}
+Y_{final}={{1}\over{2}}\sum_{i=3,4 \, Methods}{Y_i},
+\end{equation}
+where $Y$ stands for  $\langle Y_{\l\m} \rangle(E_\gamma,t,M_{KK})$.
+
+The total uncertainty on the final moments was evaluated adding in quadrature
+the statistical uncertainty, $\delta Y_{MINUIT}$ as given by MINUIT, and two systematic uncertainty contributions:
+$\delta Y_{syst\,\, fit}$ related to the moment extraction procedure, 
+and $\delta Y_{syst\,\,  norm}$, the systematic uncertainty  associated with the photon flux normalization (see Sec.~\ref{sec:exp}).
+\begin{eqnarray}
+\delta Y_{final}=\sqrt{\delta Y_{MINUIT}^2+\delta Y_{syst\,\, fit}^2+\delta Y_{syst\,\, norm}^2}\label{eq:err_Y}
+\end{eqnarray}
+with:\\
+\begin{eqnarray}
+\delta Y_{syst\,\,  fit}&=&\sqrt{\sum_{i=3,4 \, Methods}{({Y_i}-Y_{final})^2\over{2-1}}}\\
+\delta Y_{syst\,\,  norm}& =& 10\% \cdot Y_{final}.
+\end{eqnarray}
+
+{\it For most of  the data points, the systematic uncertainties dominate over the statistical uncertainty (TBC)}.
+Samples of the  final experimental moments are shown in Figs.~\ref{fig:final-1},~\ref{fig:final-2},~\ref{fig:final-3}, and~\ref{fig:final-4}.
+The whole set of moments resulting from this analysis  is  available at the Jefferson Lab~\cite{jlab-db} and the Durham~\cite{dhuram-db} databases. 
+
+
+
+
+As a check of the whole procedure, the differential cross  section $d\sigma/dt$ for the $\gamma p \to p \phi(1020))$ meson  has been extracted
+by integrating  the $\langle Y_{00} \rangle$ moment in each $-t$ bin in the range  $1.005  <M_{KK}< 1.035$~GeV after subtracting a first-order polynomial background fitted to the data (excluding the region $1.005  < M_{KK} < 1.035$ where $\langle\tilde{Y}_{00}\rangle$ is not linear due to the $\phi$ peak).
+Results are shown in fig.~\ref{fig:phi_xsec}. 
+The agreement within the quoted uncertainties  with a previous CLAS measurement~\cite{phi-clas-2000, phi-clas-2011}
+%, as well as the world data~\cite{phi-world}, 
+gives us confidence in the analysis procedure.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width = 3.2in]{figs/dsigma-dt.eps}
+ \caption{Differential cross section with $ 3.0 <E_{\gamma} < 3.8$ derived from the $\langle Y_{00} \rangle$ moment analysis compared with other results. Errors include fit parameter errors added in quadrature with a 10\% systematic error from the photon flux normalization. The CLAS 2000 analysis \cite{phi-clas-2000} is from $ 3.3 <E_{\gamma} < 3.9$ and CLAS 2011 \cite{phi-clas-2011} has bin width $10 \ MeV$ in $\sqrt{s}$. In Sec.\ref{sec:res_sec}, we calculate this cross section directly from the $P-$wave after performing the partial wave analysis.}
+\label{fig:phi_xsec}
+ \end{center}
+ \end{figure}
+
+
+\section{\label{sec:disp} Partial wave analysis}
+In the previous section we discussed how moments of the angular distribution of the $K^+K^-$ system, 
+$\langle Y_{LM} \rangle$,  were extracted from the data in each bin in photon  energy, momentum transfer and di-kaon mass. 
+In this section we describe how partial waves were parametrized and extracted by fitting the experimental moments.
+
+The moments contain information of production amplitudes of the di-kaon system. We consider amplitudes in the rest frame of the $K^+  K^-$ pair, with the $y$ axis perpendicular to the reaction plane. The spherical angle $\Omega = (\theta,\phi)$ defines direction of motion of the $K^+$ with the z-axis being either along the negative of the recoil nucleon ({\it Helicity Frame} or HF) or the beam ({\it Gottfried-Jackson} frame or GJ). Unless otherwise specified, the analysis that follows applies to either case.\\
+The amplitudes can be written as
+\begin{equation} 
+f = f_{\sigma,\lambda,\lambda'}(s,t,W,\Omega )= f_{\{\lambda\}}(s,t,W,\Omega) 
+\end{equation} 
+where $\sigma,\lambda,\lambda'$ are the helicities of the photon, target and recoil nucleon, respectively, and $W$ is the invariant mass of the $K^+ K^-$ system. \\
+The cross section is given by: 
+\begin{equation} 
+\frac{d\sigma}{d t d W d \Omega} = P.S. \frac{1}{2\times 2}\sum_{\{\lambda\}} |f_{\{\lambda\}}|^2
+\end{equation} 
+where the factor of $1/4$ comes from averaging over the initial photon and target polarization. The phase space factor (P.S.) is proportional to the breakup momentum $\kappa = \sqrt{\frac{W^2}{4} - m_{K}^2} $ and is given by
+\begin{equation} 
+P.S. =  \frac{0.38943}{64 \pi m_{N}^2E_{\gamma}^2} \frac{\kappa}{2(2\pi)^3}.
+\end{equation} \\
+\noindent
+The amplitudes $f$ are decomposed into partial waves $f^{LM}_{\{\lambda\}}$
+\begin{equation} 
+ f_{\{\lambda\}}(s,t,W,\Omega)  = \sum_{LM}  f^{LM}_{\{\lambda\}}(s,t,W) Y_{LM}(\Omega) 
+ \label{pws}
+ \end{equation}
+ so that moments are given by:
+ 
+\begin{eqnarray}
+\langle Y_{LM}\rangle = \sqrt{4\pi} \int \frac{d\sigma}{d t d W d \Omega} Y_{LM}(\Omega) d\Omega\\ \nonumber
+= \frac{\sqrt{4\pi}}{4} P.S. \sum_{\sigma,\lambda,\lambda'} \sum_{L_1,M_1,L_2,M_2} f^{L_1M_1 *}_{\sigma\lambda\lambda'}(s,t,W)\\ \nonumber
+ f^{L_2M_2 }_{\sigma\lambda\lambda'}(s,t,W) \int d\Omega Y^*_{L_1,M_1}(\Omega) Y_{L_2M_2}(\Omega) Y_{LM}(\Omega) \\ \nonumber
+=  \frac{P.S.}{4}\sum_{L_1,M_1,L_2,M_2} c(L_1,M_1,L_2,M_2;LM)\\ \left[ \sum_{\sigma,\lambda,\lambda'} f^{L_1M_1 *}_{\sigma\lambda\lambda'}(s,t,W) 
+ f^{L_2M_2}_{\sigma\lambda\lambda'}(s,t,W)  \right] \nonumber
+\label{explicit_moment_formula}
+\end{eqnarray}
+
+
+where the coefficients $c$ are 
+\begin{eqnarray} 
+c(L_1,M_1,L_2,M_2;LM) =\\ \nonumber
+ \sqrt{\frac{(2L_2+1)(2L +1)}{2L_1+1}}\langle L_2 M_2, LM|L_1M_1\rangle \langle L_20,L0|L_10\rangle .
+\end{eqnarray}
+The quantity in the brackets enters as a product of waves. {\it E.g.} for $L=1$ $M=1$, 
+   \begin{equation} 
+    \left[ \sum_{\sigma,\lambda,\lambda'} f^{11 *}_{\sigma\lambda\lambda'}(s,t,W) 
+ f^{11}_{\sigma\lambda\lambda'}(s,t,W)  \right]  \equiv P^*_{M=1} P_{M=1} .
+ \end{equation} 
+Note that so far we are using the spherical basis for the spin projection $M$ and not a linear combination of states with various $M$'s. Eq. \ref{explicit_moment_formula} is the connection between derived moments and amplitudes. Subtracting the right side to the left of equation (\ref{explicit_moment_formula}) yields a $\chi^2$ to be minimized with respect to free parameters in the amplitude parametrisation. In this way, a set of moments is used to determine the amplitudes.
+
+\subsection{Parametrisation of the partial waves}\label{sec:amplitudes}
+If we only include $S$ and $P$ partial waves, the reaction $\gamma p \rightarrow p  K^+ K^- $
+is characterized by 32 amplitudes $f^{LM}_{\sigma,\lambda,\lambda'}$. There are 8 amplitudes required to describe the $S-$wave depending on two spin projections of the photon ($\sigma= \pm 1$), the target proton ($\lambda = \pm 1/2 $), and the recoil proton ($\lambda' = \pm 1/2$). In addition, there are 24 $P-$wave amplitudes depending also on 3 spin projections of the $\phi$. The photon helicity was  restricted to  $\lambda_\gamma  = +1$
+since the other amplitudes are related by parity conservation, resulting in 16 remaining amplitudes.
+In addition, some  approximations in the parametrization  of the partial 
+waves were adopted to reduce the number of free parameters in the fit
+and are discussed below.
+
+The relative magnitudes of the moments contain information about which combinations of amplitudes are relevant to the description. In each energy and momentum transfer bin, there are four independent partial wave amplitudes for a given $L$, $M$ that are functions of $s \equiv M_{KK}^2$,
+\begin{equation}
+f^{LM}_{\{\lambda\}}(i,j,k) = f^{LM}_{\sigma = +1,\lambda,\lambda'}(s)
+\end{equation}
+corresponding to the four combinations of initial and final nucleon helicity. Note that in this section $s$ refers to $M_{KK}^2$, not the Mandelstam variable $s$. We only have one energy bin in this analysis, so fitted amplitudes do not have dependence on $E_{CM}$. In general, it is expected that dominant amplitudes require minimal photon helicity flip, \textit{i.e.}
+\begin{equation}
+|f^{L1}| > |f^{L0}|, |f^{L2}| > |f^{L-1}|
+ \end{equation}
+ corresponding to photon helicity flip by zero, one, and two units respectively.   In addition, $M=2$ waves require $L \ge 2$ ($D$ and $F$ waves) which are expected to be small in the mass range considered. We thus restrict the analysis to $|M| \le 1$ and only include $S$ and $P$ partial waves.
+
+In the s-channel helicity frame we assume the $P$-wave production ($L=1$) is dominated by helicity non-flip amplitudes, {\it i.e.} the non vanishing an independent amplitudes are:
+\begin{eqnarray}
+P_{+} \equiv f^{1,M=+1}_{+1,+,+}\\ \nonumber
+P_{-} \equiv  f^{1,M=+1}_{+1,-,-}.
+\end{eqnarray}
+We introduce two additional amplitudes per each wave, which describe unit photon helicity flip:
+\begin{eqnarray}
+P_{0+} \equiv f^{L=1,0}_{+,++},\\ P_{0-} \equiv f^{L=1,0}_{+,--} 
+\end{eqnarray}
+\begin{eqnarray} 
+S_{+} \equiv f^{L=0,0}_{+,++}\\ \nonumber
+S_{-} \equiv f^{L=0,0}_{+,--} 
+\end{eqnarray} 
+
+The dependence of moments on the $P-$wave with approximations described above reads:
+
+\begin{equation} 
+\langle Y_{00}   \rangle \sim  2[ |S_+|^2 + |S_-|^2 + 2 |P|^2 ] 
+\end{equation} 
+\begin{equation} 
+\langle Y_{20}  \rangle \sim -\frac{4}{\sqrt{5}} |P|^2 \sim - \frac{1}{\sqrt{5}} \langle Y_{00} \rangle
+\end{equation} 
+ The $\langle Y_{10} \rangle$ and $\langle Y_{11} \rangle$ moments, on the other hand, contain information about the presence of a $S-$wave through interference with the dominant $P-$wave. Nonzero $\langle Y_{10} \rangle$ and $\langle Y_{11} \rangle$ moments indicate the necessity for an $S-$wave amplitude in the description. We can also obtain helicity information: in order for the $\langle Y_{22} \rangle$ moment to be nonzero, there must be two-unit photon helicity flip amplitudes. Given that there is no significant structure in any $\langle Y_{22} \rangle$ moments of this analysis, we neglect two-unit photon helicity flip amplitudes.
+ 
+Without polarization information, it is difficult to separate out amplitudes differing only by the helicity of the nucleon.
+We fitted data using  various configurations of nucleon helicity amplitudes finding a negligible sensitivity to the different assumptions and verified that he $S/P$ interference signal in the $\langle Y_{11} \rangle$ moment cannot be described solely by interference between nucleon flip amplitudes. Indeed $P-$wave nucleon helicity flip amplitudes are expected to be small \cite{??}. For these reasons, we neglect nucleon helicity flip amplitudes. 
+The interference is, however, described by interference involving the dominant $P$-wave amplitudes. \
+
+
+\subsection{Amplitude parametrization} 
+\label{anal}
+
+ We parametrize the partial wave amplitudes $f^{LM}_{\{\lambda\}}(s,t,W)$ in eq. \ref{pws} as ratios of two functions: $N(s)$, which consists of a polynomial expansion in $s = M_{KK}^2$, and $D(s)$, containing the discontinuities for positive $s$ that are determined by unitarity.
+
+\begin{equation} 
+f^{LM}_{\{\lambda\}}(s,t,W)  = \frac{N_{LM}(s)}{D_{LM}(s)}
+ \end{equation}
+ The $P-$wave describing the $\phi$ is derived from a model of elastic $K^+K^-$ photoproduction in which the $\phi$ is produced by pomeron exchange. This approach is supported by the OZI rule and previous experimental results  \cite{Lesniak:2005}.
+
+\begin{figure}
+\includegraphics[width = 8cm]{figs/pwave-diagram.png}
+\caption{Feynman diagram for the $P-$wave $K^+K^-$ photoproduction on hydrogen, from \cite{Lesniak:2005}.}
+\label{fig:feynman1}
+\end{figure}
+
+\noindent
+The general form of the $P-$wave amplitude, shown in Fig. \ref{fig:feynman1}, is given by
+\begin{equation}
+A^{P}_{\lambda_{\gamma},\lambda,\lambda',M} = \bar{u}(p',\lambda')J^{P}_{\mu M} \epsilon^{\mu}(q,\lambda_{\gamma})u(p,\lambda),
+\end{equation}
+in which $q$ is the four-momentum of the incident photon, $\epsilon^{\mu}$ is the polarization vector of the photon, $p$ and $p'$ are the four-momenta of the incoming and recoil proton, and the current $J^{P}_{\mu M}$ as follows:
+\begin{equation}
+J^P_{\mu} = \frac{iF(t)}{M_{\phi}^2 - M_{KK}^2 - i M_{\phi} \Gamma_{\phi} }[\gamma^{\nu} q_{\nu}(k_1-k_2)_{\mu} - q^{\nu}(k_1-k_2)_{\nu} \gamma_{\mu}].
+\end{equation} 
+$M_{\phi}$ and $\Gamma_{\phi}$ denote the mass and width of the $\phi$ resonance, $k_1$ and $k_2$ are the $K^+$ and $K^-$ four-momenta. $F(t)$ is a suitably chosen function to take into account the $t$ dependence. This term is absorbed into the polynomials described above. The resulting parametrization is given by a Breit-Wigner distribution in $M_{KK}$ along with spin dependent terms that discriminate between different $P-$wave helicity amplitudes. \\ \\
+\noindent
+The $S-$wave is parametrized to account for the  $f_0(980)$ resonances using a model for the $t-$channel exchange of the $\rho$ and $\omega$ vector mesons, see Fig. \ref{fig:feynman2}. The amplitude is decomposed to the isoscalar and isovector parts as follows.
+\begin{equation}
+A^S(I) = \frac{1}{2}[A^S(I=0) + A^S(I=1)].
+\end{equation}
+The amplitude has also been factorized, shown diagrammatically in Fig. \ref{fig:feynman3}, into the Born factor $A^B_j(I)$ and the factor $t_{f}$ responsible for the final state interactions
+\begin{equation}
+A^S(I) = \sum_{j=\pi \pi , K\bar{K}} A^B_j (I) t_{jf}(I)
+\end{equation}
+where 
+\begin{equation}
+t_{jf}(I) \approx \frac{1}{2}[\delta_{jf} + S_{jf}].
+\end{equation}
+ \begin{figure}
+\%includegraphics[width = 12cm]{figs/swave1.png}
+\caption{Feynman diagram for the $S-$wave $K^+K^-$ Born amplitudes, from \cite{Lesniak:2005}.}
+\label{fig:feynman2}
+\end{figure}
+
+ \begin{figure}
+\includegraphics[width = 8cm]{figs/swave2.png}
+\caption{Diagrams for elastic $K^+ K^-$ rescattering and inelastic $\pi \pi \rightarrow K^+ K^-$ transition, from \cite{Lesniak:2005}.}
+\label{fig:feynman3}
+\end{figure}
+\noindent
+
+%For more details and for parametrizations of individual waves, see Appendix \ref{sec:params}.
+
+To account for detector resolution, the moments calculated from the amplitude parametrizations via Eq. \ref{explicit_moment_formula} were smeared by a Gaussian. The $\phi$ width apparent in the $\langle Y_{00} \rangle$ moment determines the smearing needed in order for the $P-$wave parametrization (with fixed $\phi$ width) to match the data. 
+%This step is explained in Appendix \ref{appendix_resolution}. This resolution effect was also present in the moment reconstruction procedure when it was applied to pseudo data.
+% in Appendix \ref{sec:p_wave_pseudo}. 
+Reconstructed moments are smeared out after the fit procedure only once the detector acceptance is taken into account. 
+
+\section{Results}\label{sec:res}
+
+\subsection{Fit of the moments}
+
+We fit moments $\langle Y_{LM} \rangle$ with $L \le 2$ and $M \le 2$ using up to $l=1\ (P)$ waves as described above. 
+In Figs. \ref{fig:mom_results_start} - \ref{fig:mom_results_end}, we present the fit results of this analysis from $0.6 < -t < 1.3 \ GeV^2 $. To properly take into account the error contributions (statistical and systematic) to the experimental moments described in Sec.~\ref{sec:final_moments}, the two sets of moments, from methods 3 and 4, were individually fit, and the fit results were averaged obtaining the central value shown by the black line in the figures. The error band, shown as a grey area, was calculated following the same procedure adopted for the experimental moments (Sec.~\ref{sec:final_moments}). The two lowest momentum transfer bins $ 0.4 \le t \le 0.6 \ GeV^2$ were excluded from the analysis because the moment reconstruction procedure was found to not to be reliable in this region. In addition, the $\langle Y_{10} \rangle$ moment was not used to extract the $S-$wave magnitude because the moment extraction procedure cannot always reproduce an accurate $\langle Y_{10} \rangle$ moment when tests were performed on pseudo data. 
+
+\subsection{Error evaluation}
+The final error was computed as the sum in quadrature of the statistical error of the fit, and two systematic error contributions: the first related to the moment extraction procedure, evaluated as the variance of the two fit results; the second associated to the photon flux normalization estimated to be 10\%. Central values and errors for all the observables of interest discussed in the next sections were derived from the fit results with the same procedure.
+
+\begin{figure}
+\includegraphics[width = 3.5in]{figs/AVG-wave-moments-t4.eps}
+\caption{Experimental moments $\langle Y_{LM} \rangle$ (red) with $L \leq 2$ and $M \leq 2$ together with moments derived from fitted amplitudes (black), inlcuding $l=0$ and $l=1$ amplitudes in the fit, in the $0.6 \le t \le 0.7 \ GeV^2$ bin. $\chi^2 = 1.9$.}
+\label{fig:mom_results_start}
+\end{figure}
+\begin{figure}
+\includegraphics[width = 3.5in]{figs/AVG-wave-moments-t5.eps}
+\caption{Experimental moments $\langle Y_{LM} \rangle$ (red) with $L \leq 2$ and $M \leq 2$ together with moments derived from fitted amplitudes (black), inlcuding $l=0$ and $l=1$ amplitudes in the fit, in the $0.7 \le t \le 0.8 \ GeV^2$ bin. $\chi^2 = 1.8$.}
+\label{fig:results1}
+\end{figure}
+\begin{figure}
+\includegraphics[width = 3.5in]{figs/AVG-wave-moments-t6.eps}
+\caption{Experimental moments $\langle Y_{LM} \rangle$ (red) with $L \leq 2$ and $M \leq 2$ together with moments derived from fitted amplitudes (black), inlcuding $l=0$ and $l=1$ amplitudes in the fit, in the $0.8 \le t \le 0.9 \ GeV^2$ bin. $\chi^2 = 1.9$ bin.}
+\label{fig:results1}
+\end{figure}
+\begin{figure}
+\includegraphics[width = 3.5in]{figs/AVG-wave-moments-t7.eps}
+\caption{Experimental moments $\langle Y_{LM} \rangle$ (red) with $L \leq 2$ and $M \leq 2$ together with moments derived from fitted amplitudes (black), inlcuding $l=0$ and $l=1$ amplitudes in the fit, in the $0.9 \le t \le 1.0 \ GeV^2$ bin. $\chi^2 = 1.8$.}
+\label{fig:results1}
+\end{figure}
+\begin{figure}
+\includegraphics[width = 3.5in]{figs/AVG-wave-moments-t8.eps}
+\caption{Experimental moments $\langle Y_{LM} \rangle$ (red) with $L \leq 2$ and $M \leq 2$ together with moments derived from fitted amplitudes (black), inlcuding $l=0$ and $l=1$ amplitudes in the fit, in the $1.0 \le t \le 1.1 \ GeV^2$ bin. $\chi^2 = 1.8$.}
+\label{fig:results1}
+\end{figure}
+\begin{figure}
+\includegraphics[width = 3.5in]{figs/AVG-wave-moments-t9.eps}
+\caption{Experimental moments $\langle Y_{LM} \rangle$ (red) with $L \leq 2$ and $M \leq 2$ together with moments derived from fitted amplitudes (black), inlcuding $l=0$ and $l=1$ amplitudes in the fit, in the $1.1 \le t \le 1.2 \ GeV^2$ bin. $\chi^2 = 1.9.$ bin.}
+\label{fig:results1}
+\end{figure}
+\begin{figure}
+\includegraphics[width = 3.5in]{figs/AVG-wave-moments-t10.eps}
+\caption{Experimental moments $\langle Y_{LM} \rangle$ (red) with $L \leq 2$ and $M \leq 2$ together with moments derived from fitted amplitudes (black), inlcuding $l=0$ and $l=1$ amplitudes in the fit, in the $1.2 \le t \le 1.3 \ GeV^2$ bin. $\chi^2 = 1.9.$ bin.}
+\label{fig:mom_results_end}
+\end{figure}
+
+\subsection{Partial wave amplitudes} 
+As an example, the square of the magnitude of $S$ and $P$ partial waves derived by the fit for the momentum transfer bin 
+$0.7 < -t < 0.8 \ GeV^2 $ are shown in Fig. \ref{fig:waves_res}. The top plots show the partial waves summed over all helicities. The two bottom plots show the amplitudes for two possible values of $\lambda_{KK}$, the helicity of the di-kaon system. Note that we use the wave with photon helicity, $\sigma_{\gamma}=+1$ as a reference. Thus, $\lambda_{KK} = 1$ corresponds to no-helicity flip ($s-$channel helicity conserving) amplitude, which, as expected is the dominant one, and $\lambda_{KK}=0$ corresponds to unit photon helicity flip. Two unit photon helicity flip amplitudes, $\lambda_{KK}=-1$, amplitudes were not considered because the $\langle Y_{22} \rangle$ moment is small. Furthermore, we expect two unit helicity flip amplitudes to be small compared to $\lambda_{KK} = 1,0$ amplitudes. Non vanishing $\langle Y_{22} \rangle$ moments show the presence of a small two unit helicity flip amplitude. By neglecting $\lambda_{KK}=-1$ amplitudes, we are focusing on describing the dominant structure is in the $\langle Y_{11} \rangle$ and $\langle Y_{20} \rangle$ moments and reducing the number of fit parameters.  
+
+We briefly comment on the ability to extract meaningful $P_{\lambda=0}$ amplitudes from the moments. The  $\langle Y10 \rangle$ and $\langle Y20 \rangle$ moments (which give information about the $P_{\lambda=0}$ amplitude) are well-described by the $P_{\lambda=1}$ and $S$ amplitudes, and there is no need to introduce the $P_{\lambda=0}$ waves at momentum transfer $-t > 0.7 $ GeV$^2$. The iterative fitting procedure first fits for the $S$ and $P_{\lambda=1}$ amplitudes which are the dominant contributions. There is not enough information to uniquely determine $P_{\lambda=0}$ at large $-t$, which is why it is small or zero. The amount of information decreases with increasing $-t$ because the structure in the moments becomes less pronounced. The whole P wave amplitude is the only part which can be unambiguously extracted given the limited information in the moments.
+
+
+\subsection{Systematic studies}\label{sec:sys}
+The error bands plotted in  Fig.~\ref{ig:fwaves_res} include
+the systematic uncertainties related to the moment extraction  and the photon flux normalization
+as discussed in  Sec.~\ref{sec:final_moments}. In addition, detailed systematic studies using both Monte Carlo and data were performed to test the stability of results against the analysis procedure.
+In the following, are are shown for method M3 used in experimental moments extraction but similar conclusions were obtained applying method M4.
+
+\subsubsection{Energy bin size}
+Two energy bin configurations were studied: a single bin with $3.0 < E_{\gamma} < 3.8$ and two bins $3.0 < E_{\gamma} < 3.4$ and $3.4 < E_{\gamma} < 3.8$. Moments are more stable for the single energy bin configuration due to larger statistics. However, kaon-nucleon mass distributions were better reproduced using the smaller bin size. The angular moments obtained from both configurations are shown to be in good agreement in Fig. \ref{fig:ebin1}.
+\begin{figure}
+\includegraphics[width=3.5in]{figs/FINALvsOLD_method3-l=2.eps}
+\caption{Normalized moments obtained from method M3 with varying energy bin sizes and $\lambda_{max}=2$.}
+\label{fig:ebin1}
+\end{figure}
+\subsubsection{Cut on $M_{K^-p} > 1.6$ $GeV/c^2$}
+The $\Lambda(1520)$ peak in the $K^-p$ mass distribution cannot be reproduced with $\lambda_{max} < 4$ with any of the four methods. Figs. \ref{fig:before_cut1} show fit results before cutting out the region containing the $\Lambda(1520)$.
+This region is not a main focus of this study, so this kinematical region with $M_{K^-p} < 1.6$ $GeV/c^2$ was removed from this analysis. Dalitz plots of the whole data set $(p K^+ K^-)$ before and after this cut, show that the number of events in the $M_{KK}$ region near the $\phi$ mass are not affected by this cut. Therefore, the systematic effect of this cut on the determined cross sections is negligible. \begin{figure}[htpb]
+\includegraphics[width=3.5in]{figs/method3_pkm_recreate.eps}
+\caption{Measured number of events as a function of the $pK^-$ invariant mass compared to the predicted distribution computed with fitted results from method 3 weighted by the experimental acceptance before cutting out the $\Lambda(1520)$.}
+\label{fig:before_cut1}
+\end{figure}
+\subsubsection{Sensitivity to $\lambda_{max}$ and effect of truncation to $\lambda_{max}=4$}
+Fig. \ref{fig:cutoff3} shows results from method M3 in which the intensity is parametrized by moments and the likelihood is maximized in one energy and t bin ($3.0\le E \le 3.8$, $0.6 \le -t \le 0.7$). $\lambda_{max}$ is varied from 2 up to $\lambda_{max} = 6$. Fits become unstable as the number of free parameters increase to $\lambda_{max}=6$. Overall, method M3 is much more stable than methods M1 and M2. 
+\begin{figure}
+\includegraphics[width=3.5in]{figs/OLDmethod3_cutoff.eps}
+\caption{Efficiency-corrected, normalized $\langle {Y}_{\lambda \mu}\rangle$ moments from method M3 varying $\lambda_{max}$. $\langle {Y}_{00}\rangle$ corresponds to the normalized cross section.}
+\label{fig:cutoff3}
+\end{figure}
+
+The $\lambda_{max}=4$ fit reproduces main features of the data in the region of interest ($M_{KK} \le 1.1 \ GeV$). We compare helicity angles and invariant masses in Figs. \ref{fig:mass} and  \ref{fig:angles} between data and reconstructions from the final fit results (average of methods M3 and M4) for three different $M_{KK}$ intervals ($M_{KK} = 0.995 \pm .01 \ GeV$, $M_{KK} = 1.0275 \pm .01 \ GeV$, $M_{KK} = 1.0575 \pm .01 \ GeV$).The rationale for this choice of mass regions is as follows. The first region lies to the left of the $\phi$ peak, the second is directly on the peak where the signal is dominated by the $\phi$, and the third region is to the right of the $\phi$ peak.  In the first mass region shown on the top of the figures, a large momentum transfer range ($0.4  \le -t \le 1.0$) was integrated over to obtain an appreciable number of events. In general, it was found that reconstructed distributions from smaller bin sizes in $t$ and $E$ better reproduce data. 
+\begin{figure}
+\includegraphics[width=3.5in]{figs/hel-angles-range1.eps}
+\includegraphics[width=3.5in]{figs/hel-angles-range2.eps}
+\includegraphics[width=3.5in]{figs/hel-angles-range3.eps}
+\caption{Comparison of helicity angles in the $f_0(980)$ mass region ($M_{KK} = 0.995 \pm .01 \ GeV$) (top),  in the $\phi$ mass region ($M_{KK} = 1.0275 \pm .01 \ GeV$) (middle),  and outside of the $\phi$ meson mass region ($M_{KK} = 1.0575 \pm .01 \ GeV$) as measured (black) and reconstructed by the fit procedure (purple) using $\lambda_{max}=4$. $0.4 \le -t \le 1.0 \ GeV^2$.}
+\label{fig:angles}
+\end{figure}
+\begin{figure}
+\includegraphics[width=3.5in]{figs/masses-range1.eps}
+\includegraphics[width=3.5in]{figs/masses-range2.eps}
+\includegraphics[width=3.5in]{figs/masses-range3.eps}
+\caption{Comparison of kaon-nucleon invariant mass distributions in the $f_0(980)$ mass region ($M_{KK} = 0.995 \pm .01 \ GeV$) (top),  in the $\phi$ mass region ($M_{KK} = 1.0275 \pm .01 \ GeV$) (middle),  and outside of the $\phi$ meson mass region ($M_{KK} = 1.0575 \pm .01 \ GeV$) as measured (black) and reconstructed by the fit procedure (purple) using $\lambda_{max}=4$. $0.4 \le -t \le 1.0 \ GeV^2$.}
+\label{fig:mass}
+\end{figure}
+
+The helicity angle distributions reproduced from the fits are in good agreement with the data.
+There is a similarity in the $\phi_{K}$ helicity anglular distributions between events in the second ($M_{KK} = 1.0275 \pm .01 \ GeV$) and third ($M_{KK} = 1.0575 \pm .01 \ GeV$) mass range. This is counterintuitive because the angular distribution in Fig. \ref{fig:angles2} ($M_{KK} = 1.0275 \ GeV$ ) resembles
+a $P-$wave signal as expected, but the angular distribution in Fig.
+\ref{fig:angles3}, which is away from the $\phi$ peak ($M_{KK} = 1.0575 \ GeV$), looks similar. We found this can be attributed to CLAS detector acceptance and not the presence of a large $P-$wave in the third mass interval. The accepted MC distribution also takes the same form as the data in the region due to the detector acceptance. The shape of the $\phi_{K}$ angular distribution from the data outside of the $\phi$ meson mass region can therefore be explained by the angular dependence of the detector acceptance.
+
+The invariant mass distributions of the data are also described well by the fit results. The two regions away from the $\phi$ are shown in the top and bottom plots of  Fig.~\ref{fig:mass}. The kaon-nucleon mass distributions directly on the $\phi$ peak (middle plots) are consistent within one sigma error, excluding a few bins.
+
+
+\subsection{Differential cross sections} \label{sec:res_sec}
+Differential cross section $d\sigma^l /dt$ for individual waves and mass regions ($Mass\pm \Gamma$) can be obtained by integrating the corresponding amplitude and are shown in Figs. \ref{fig:dsigma1} and \ref{fig:dsigma2}.  All cross sections are found by integrating the mass region $1.0195 \pm 0.0225 \ GeV$. 
+It is worth noting that magnitudes of the $S$ and $P_0$ waves found in this analysis (see Table \ref{tab:results}) are consistent with predictions (summarized in Table 3.2) of a model constrained on a somewhat higher photon energy data. 
+
+\begin{figure}
+\includegraphics[width = 8cm]{figs/dsigmaS-dt.eps}
+\caption{Differential cross section obtained from integrating the $S-$wave magnitude in the $M_{KK}$ range $1.0195 \pm 0.0225 \ GeV$. {\it  DO WE WANT TO ADD AN EXP FIT ON TOP OF TDATA POINTS?} }
+\label{fig:dsigma1}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width = 8cm]{figs/dsigmaP-dt.eps}
+\caption{Differential cross section obtained from integrating the $P-$wave magnitude in the $M_{KK}$ range $1.0195 \pm 0.0225 GeV$. {\it  DO WE WANT TO ADD AN EXP FIT ON TOP OF TDATA POINTS?} }
+\label{fig:dsigma2}
+\end{figure}
+
+
+ \begin{table}
+ \caption{Integrated cross sections in nb}
+\centering
+\begin{tabular}{|c|c|}
+	\hline
+	photon energy & 3.0 - 3.8 $GeV$ \\
+	\hline
+total cross section (nb) & 24.9 \\
+	\hline
+sum of $P-$waves & 20.7 $\pm$ 2.3    \\
+	\hline
+$P_0$-wave   & 1.98 $\pm$ 0.64   \\
+	\hline
+$S-$wave &    4.2 $\pm$ 0.24 \\
+	\hline
+\end{tabular}
+\\
+\caption{Differential cross section obtained from this analysis by integrating the $S-$ and $P-$wave magnitudes in the $M_{KK}$ range $1.0195 \pm 0.0225 \ GeV$ in the single momentum transfer bin $0.6 \le - t \le 0.7$.}
+\label{tab:results}
+\end{table}
+
+\begin{figure}
+\includegraphics[width = 8cm]{figs/cross-sections.png}
+\caption{Table 3.2: Differential cross section obtained from integrating the $S-$ and $P-$wave magnitudes in the $M_{KK}$ range $1.0195 \pm 0.0225 \ GeV$ from \cite{Lesniak:2005}. Shown results are integrated over all $t$. {\it TO BE ENTERED AS TABLE}}
+\label{fig:lesniak}
+\end{figure}
+
+\section{\label{sec:sum} Summary}
+In summary, we have performed a partial wave analysis of the reaction  $\gamma p \to p K^+ K-$ in the photon energy range 3.0-3.8~GeV
+and momentum transfer range $-t=0.6-1.3$~GeV$^2$. Moments of the di-kaon angular distribution, defined as bi-linear functions of partial wave amplitudes,
+were fitted to the experimental data with an un-binned likelihood procedure. Different parametrisation bases were used and detailed systematic checks 
+were performed to insure the reliability of the analysis procedure. We extracted moments $\langle Y_{LM}\rangle$ with $L \le 4$ and $M \le 2$ using amplitudes with $l \le 2$ (up to $P$-waves). 
+The production amplitudes have been parametrised using Regge-theory inspired model. The $P-$wave, dominated by the $\phi(1020)$-meson, has been parametrised by the Pomeron exchange while the hint of the $f_0(980)$ meson  in the  $S$-wave has been described by the exchange of the $\omega$ and $\rho$ vector mesons in the $t$-channel. This model also account for the final state interaction (FSI) of  emitted kaons. 
+The moment $\langle Y_{00} \rangle$ is dominated by the $\phi(1020))$ meson contribution in the $P$-wave,
+while the moments $\langle Y_{10} \rangle$ and $\langle Y_{11} \rangle$  show  contributions of the $S$-wave  through 
+interference with the $P$-wave. The cross sections of $S-$ and $P-$ waves in the mass range of the $\phi(1020)$,  were 
+computed. This is the first time that the $S-$wave contribution to the elastic K$^+$$K^-$ phooproduction has been measured.
+
+
+\section{\label{sec:ack} Acknowledgments}
+We would like to acknowledge the outstanding efforts of the staff of the Accelerator
+and the Physics Divisions at Jefferson Lab that made this experiment possible. 
+This work was supported in part by  the  Italian Istituto Nazionale di Fisica Nucleare, 
+the French Centre National de la Recherche Scientifique
+and Commissariat \`a l'Energie Atomique, the UK Science and Technology Facilities Research Council (STFC),
+the U.S. Department of Energy and National Science Foundation, 
+and the Korea Science and Engineering Foundation.
+The Southeastern Universities Research Association (SURA) operates the
+Thomas Jefferson National Accelerator Facility for the United States
+Department of Energy under contract DE-AC05-84ER40150.
+
+\newpage
+
+\begin{thebibliography}{99}
+  
+\bibitem{elsa} C. Wu \textit{et al.}, Eur. Phys. J. \textbf{A 23}, 317 (2005).
+\bibitem{mami} XXX \textit{et al.}, XXX \textbf{X XX}, X (XXXX).
+\bibitem{clas} XXX \textit{et al.}, XXX  \textbf{X XX}, X (XXXX).
+\bibitem{gluex} XXX \textit{et al.}, XXX  \textbf{X XX}, X (XXXX).
+\bibitem{mesonx} XXX \textit{et al.}, XXX  \textbf{X XX}, X (XXXX).
+\bibitem{Ballam73} J. Ballam \textit{et al.}, Phys. Rev \textbf{D 7}, 3150 (1973).
+\bibitem{Aston80} D.~Aston {\it et al.}, Nucl. Phys. B {\bf 172}, 1 (1980).
+\bibitem{Fries78} XXX \textit{et al.}, XXX  \textbf{X XX}, X (XXXX).
+\bibitem{Caprini:2005zr}   I.~Caprini, G.~Colangelo and H.~Leutwyler,  Phys.\ Rev.\ Lett.\  {\bf 96}, 132001 (2006).
+\bibitem{Kaminski:2006qe}  R.~Kaminski, J.~R.~Pelaez and F.~J.~Yndurain,  Phys.\ Rev.\  D {\bf 77}, 054015 (2008).
+\bibitem{Kaminski:2006yv}   R.~Kaminski, J.~R.~Pelaez and F.~J.~Yndurain,  Phys.\ Rev.\  D {\bf 74}, 014001 (2006)
+\bibitem{kappa} XXX \textit{et al.}, XXX  \textbf{X XX}, X (XXXX).
+\bibitem{Bugg:2004xu}  D.~V.~Bugg,  Phys.\ Rept.\  {\bf 397}, 257 (2004).
+\bibitem{Behrend} H. -J. Behrend \textit{et al.}, Nucl. Phys. \textbf{B 144}, 22 (1978).
+\bibitem{Barber} D. P. Barber \textit{et al.}, Z. Phys \textbf{C 12}, 1 (1982).
+\bibitem{f0-clas} M.Battaglieri \textit{et al.} (CLAS Collaboration), Phys. Rev. Lett.  \textbf{102}, 102001 (2009).
+\bibitem{2pi-clas} M.~Battaglieri {\it et al.}  [CLAS Collaboration], Phys.\ Rev.\  D {\bf 80}, 072005 (2009).
+\bibitem{B00} B.A. Mecking {\it et al.}, Nucl. Instr. and Meth. A{\bf 503}, 513  (2003).
+\bibitem{SO99}  D. I. Sober {\it et al.}, Nucl. Instr. and Meth. {\bf A440}, 263  (2000).
+\bibitem{tag-abs_cal} S. Stepanyan {\it et al.}, Nucl. Instr. and Meth. A{\bf 572}, 654  (2007).
+\bibitem{tag-kinefit} M. Williams, D.Applegate, and C. A. Meyer,   CLAS-Note 2004-017,
+\texttt{http://www1.jlab.org/ul/Physics/Hall-B/}
+\texttt{clas/public/2004-017.pdf}.
+\bibitem{DC}    M.D. Mestayer    {\it et al.}, Nucl. Instr. and Meth. {\bf A449}, 81 (2000).
+\bibitem{Sm99}  E.S. Smith {\it et al.}, Nucl. Instr. and Meth. {\bf A432}, 265  (1999).
+\bibitem{ST} Y.G. Sharabian {\it et al.}, Nucl. Instr. and Meth. {\bf A556}, 246  (2006).
+\bibitem{Ballam_1} J. Ballam \textit{et al.}, Phys. Rev \textbf{D 5}, 545 (1972).
+\bibitem{sal-note} S. Lombardo $\it{et \ al.}$,  CLAS-Analysis Note 2014  {\em http://www.jlab.org/Hall-B/secure/clas\_hadron/analysis\_reviews/XXX}
+\bibitem{jlab-db} JLab Experiment CLAS Database \texttt{http://clasweb.jlab.org/physicsdb/intro.html}
+\bibitem{dhuram-db} The Durham HEP Databases \texttt{http://durpdg.dur.ac.uk/}
+\bibitem{phi-clas-2000}   E.~Anciant $\it{et al.}$, (CLAS Coll.), PRL 854682 (2000).
+\bibitem{phi-clas-2011} B.~Dey $\it{et al.}$ (CLAS Coll.), PRC 89 055208 (2014).
+\bibitem{phi-world} XXX \textit{et al.}, XXX  \textbf{X XX}, X (XXXX).
+\bibitem{??} XXX \textit{et al.}, XXX  \textbf{X XX}, X (XXXX).
+\bibitem{Lesniak:2005} L.~Lesniak, A.P.~Szczepaniak, [arXiv:hep-ph/0509253].
+
+
+
+
+
+
+
+\end{thebibliography}
+
+\end{document}
+% LocalWords:  pb nK pentaquark LEPS qqq pentaquarks JLab SAPHIR Breit hyperons
+% LocalWords:  unbinned=
