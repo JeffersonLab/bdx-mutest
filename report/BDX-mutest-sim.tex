@@ -108,15 +108,16 @@ The difference in the error bar size indicates the improvement obtained by this 
 
 \begin{figure}[h!] 
 \center
-\includegraphics[width=12cm]{figs/bg-csi.pdf}   
-\caption{Energy deposited in the BDX-Hodo CsI(Tl) crystal by ALL crossing particles. The crystal has been located in the region of interest $\sim 20$ m downstream of the beam-dump. }
+\includegraphics[width=10cm]{figs/fluence.pdf}   
+\caption{Fluence per EOT in the  CsI(Tl) crystal of  all crossing particles (black) and muons only (red). The crystal is located in the region of interest $\sim 20$ m downstream of the beam-dump. }
 \label{fig:bg-csi}
 \end{figure}
 
-\subsubsection{Background - FLUKA}
+\subsubsection{Background - FLUKA} 
 We used FLUKA to estimate the background expected in the BDX-Hodo detector.
-We simulated an 11 GeV electron-beam interacting with the beam-dump   and sampled the energy deposition in the BDX-Hodo CsI(Tl) crystal  located in the region of interest. 
-Figure ~\ref{fig:bg-csi} shows the energy deposited in the crystal volume. The peak around XX MeV corresponds to MIPs crossing the crystal. The flux of MIPs derived  integrating the peak over a smooth background is in good agreement with the number of muons obtained by the full muon simulation with  GEMC. The remaining hits are mainly due to high energy neutrons interacting with the crystals and low energy neutrons captured by surrounding material. More details are reported in Sec.~\ref{sec:results}.
+We simulated an 11 GeV electron-beam interacting with the beam-dump, propagate all particles to the location of interest obtaining the fluence on the CsI(Tl) surface.
+Figure ~\ref{fig:bg-csi} shows the resulting fluence per EOT as a function of energy  for all particles (black) and muons only (red).
+As expected,  muons are the only high energetic  particles reaching  the crystal while other species (neutrons mainly) account for the low energy of the spectrum. More details are reported in Sec.~\ref{sec:results}.
 \begin{figure}[h!] 
 \center
 \includegraphics[width=7.5cm]{figs/NeutronsDump_1D.pdf}    
