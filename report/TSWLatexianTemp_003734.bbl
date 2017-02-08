@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{bdx-proposal}
+{The BDX Collaboration}.
+\newblock {Dark matter search in a Beam-Dump eXperiment (BDX) at Jefferson
+  Lab}, 2016.
+\newblock {\url{https://arxiv.org/abs/1607.01390}}.
+
+\bibitem{jnote-bd}
+M~Kharashvili.
+\newblock JLAB-TN-16-048.
+
+\bibitem{gemc}
+{Ungaro, M.}
+\newblock {CLAS12 GEANT4 Simulation Package GEMC}, 2016.
+\newblock {\url{http://gemc.jlab.org}}.
+
+\end{thebibliography}
