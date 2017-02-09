@@ -17,9 +17,9 @@ Fig.~\ref{fig:mu-comp} shows the muon flux crossing the BDX-Hodo  as obtained by
 The flux has been sampled assuming the BDX-Hodo centered to  the beam-line depth.
 Results are reported for muons generated at high statistic by the custom $\mu$ event generator and propagated using GEMC (green points in the figure).
 The number of event generated at the dump correspond to  (1.2 $\pm$0.1) 10$^{12}$ EOT or one second of 0.2 $\mu$A current.
-Rates in crystal, scintillators and  requiring a 5-fold coincidence of the two front/back layers of plastic with  the crystal are reported in Tab.~\ref{tab: rate} for a beam current of 10$\mu$A and detection thresholds as listed in the previous Section. Results show a drop in rate by about one order of magnitude when moving from one location to the next. 
-Table~\ref{tab: rate-height}  shows the expected rate measured in  position {\bf C}  when the BDX-Hodo detector is off-axes by 40/80 cm. The measurement of muon rate at different heights (angles) wrt to the beam-line (beam-dump) will provide further information to validate simulations.  
-Fluxes in position {\bf C} (or/and {\bf B}) are big enough to be detectable (significantly higher than cosmic muons and beam-dump neutron background) and manageable  by crystal, SiPms and front end electronics (no pile-up effects expected). These two locations are close to the paved road and easily accessible by the drilling machine and related equipment. Similar conclusions (scaling rates by 10) hold  if the beam current drops/increases by one order of magnitude (1/100 $\mu$A) making the test feasible in parallel to any 11 GeV operation of Hall-A.
+Rates in crystal, scintillators and  requiring a 5-fold coincidence of the two front/back layers of plastic with  the crystal are reported in Tab.~\ref{tab:rate} for a beam current of 10$\mu$A and detection thresholds as listed in the previous Section. Results show a drop in rate by about one order of magnitude when moving from one location to the next. 
+Table~\ref{tab:rate-height}  shows the expected rate measured in  position {\bf C}  when the BDX-Hodo detector is off-axes by 40/80 cm. The measurement of muon rate at different heights (angles) wrt to the beam-line (beam-dump) will provide further information to validate simulations.  
+Fluxes in position {\bf C} (or/and {\bf B}) are large enough to be detectable (significantly higher than cosmic muons and beam-dump neutron background) and manageable  by crystal, SiPms and front-end electronics (no pile-up effects expected). These two locations are close to the paved road and easily accessible by the drilling machine and related equipment. Similar conclusions (scaling rates by 10) hold  if the beam current drops/increases by one order of magnitude (1/100 $\mu$A) making the test feasible in parallel to any 11 GeV operation of Hall-A.
 
 \begin{table}[htp]
 \caption{Beam-on muon rates expected in BDX-Hodo for I$_{beam}$=10$\mu A$ in locations {\bf A}, {\bf B},  and {\bf C}.}
@@ -59,9 +59,9 @@ Vertical distance  & Rate$_{Crystal}$  (kHz)&  Rate$_{Front-Back \;Scint} $(kHz)
 
 
 \subsection{Muon flux above-the-ground}
-For sake of completeness the muon flux has also been evaluated by using FLUKA in the closest locations accessible above the  beam-dump vault .  This set-up assumes to locate the detector above-the-ground with no drilling required  largely  simplifying the tests.
-Due to the CPU-time necessary to track muons at such large angle (with respect to the beam axis) we used a two steps procedure. Firstly, the 11 GeV electron beam was let to interact with the beam dump and muons produced on the roof of the vault sampled in four  different locations (shown in  Fig.~\ref{fig:bd-top}-left ).
-A high statistic sample of muons have then been generated according to the previous distributions and propagated to the outside.  Applying  a conservative hypothesis (the muons are propagated perpendicular to the beam axis  crossing the minimal amount of concrete and dirt) muons with energy higher than 4.5 GeV (the minimum to not been ranged out)  were propagated and sampled in the four  perpendicular outdoor positions. Figure~\ref{fig:bd-top}-right shows the four locations (A$_{Ext}$, B$_{Ext}$, C$_{Ext}$,  and D$_{Ext}$) on top of the hill. Integrating  over the surface of the BDX-Hodo detector ($\sim 100$ cm$^2$) and considering as a reference a beam current of 10 $\mu$A, no sizeable muon flux would be detected (Rate$_{Max}<$3 Hz).
+For sake of completeness the muon flux has also been evaluated by using FLUKA in the closest locations accessible above the  beam-dump vault .  This set-up assumes to locate the detector above-the-ground with no drilling required  largely  simplifying the test.
+Due to the CPU-time necessary to track muons at such large angle (with respect to the beam axis) we used a two steps procedure. Firstly, the 11 GeV electron beam was let to interact with the beam-dump and muons produced on the roof of the vault sampled in four  different locations (shown in  Fig.~\ref{fig:bd-top}-left ).
+A high statistic sample of muons have then been generated according to the previous distributions and propagated to the outside.  Applying  a conservative hypothesis (the muons are propagated perpendicular to the beam axis  crossing the minimal amount of concrete and dirt) muons with energy higher than 4.5 GeV (the minimum to not been ranged out)  were propagated and sampled in the four  perpendicular outdoor positions. Figure~\ref{fig:bd-top}-right shows the four locations (A$_{Ext}$, B$_{Ext}$, C$_{Ext}$,  and D$_{Ext}$) on top of the hill. Integrating  over the surface of the BDX-Hodo detector ($\sim 100$ cm$^2$) and considering as a reference a beam current of 10 $\mu$A, no sizeable muon flux would be detected (Rate$_{Max}<$3 Hz). Rates in the different outdoor locations are listed in Tab.~\ref{tab:outside}.
 
 \begin{figure}[h!] 
 \center
@@ -70,7 +70,7 @@ A high statistic sample of muons have then been generated according to the previ
 \caption {Left: In red are shown the points on the roof  where muon flux has been sampled. Right:  A$_{Ext}$, B$_{Ext}$, C$_{Ext}$,  and D$_{Ext}$ are the four location outdoor where the muon flux has been evaluated.}
 \label{fig:bd-top}
 \end{figure}
-Table~\ref{tab:outside} report the rates as obtained by the simulations.
+
 
 \begin{table}[htp]
 \caption{Beam-on muon rate expected outdoor,  on top of the beam-dump hill.}
@@ -98,8 +98,8 @@ D$_{Ext}$ & negligible\\
 
 \subsubsection{Beam-related background}
 Beside muons, other particles are produced in the 11 GeV electron beam interaction with the dump.
-The majority (electrons, gamma, nuclei and fragments) are ranged out well before to reach the region of interest but some (low energy neutrons mainly) may propagate throught the concrete and the dirt reaching the BDX-Hodo detector.
-Fig.~\ref{fig:nu-comp} shows the neutron flux  as obtained by  FLUKA starting from the electron/beam-dump interaction  in the  three locations of interest. 
+The majority (electrons, gamma, nuclei and fragments) are ranged-out well before to reach the region of interest but some (low energy neutrons, mainly) may propagate through  concrete and  dirt reaching the BDX-Hodo detector.
+Fig.~\ref{fig:nu-comp} shows the neutron flux  in the  three locations of interest as obtained by  FLUKA simulations. 
 \begin{figure}[h!] 
 \center
 \includegraphics[width=4.7cm]{figs/NeutronsPipe1_1D.pdf}
@@ -109,7 +109,7 @@ Fig.~\ref{fig:nu-comp} shows the neutron flux  as obtained by  FLUKA starting fr
 \label{fig:nu-comp}
 \end{figure}
 
-For a complete understanding of the low energy ($<$ MeV) background in the BDX-Hodo crystal, particles produced in the dump can not tracked separately since some of them are produced along the way (e.g by energetic muons or neutrons in the proximity of the detector). On top of that, neutral particles (in particular low energy/thermal neutron) do not directly interact with the crystal but deposit a visible energy via secondary interactions (e.g. gamma from nuclear capture in the surrounding material) making hard, if not impossible,  to track back the background source. For all the above mentioned reasons we evaluated the background by running the full FLUKA simulation of  11 GeV electrons interacting with the beam-dump recording  the deposited energy in BDX-Hodo crystal. 
+For a complete understanding of the low energy ($<$ MeV) background in the BDX-Hodo crystal, particles produced in the dump can not tracked separately since some of them are produced along the way (e.g by energetic muons or neutrons in the proximity of the detector). On top of that, neutral particles (in particular low energy/thermal neutron) do not directly interact with the crystal but deposit a visible energy via secondary interactions (e.g. gamma from nuclear capture in the surrounding material) making hard, if not impossible,  to track back the background source. For all the above mentioned reasons we evaluated the background by running the  full FLUKA simulation of  11 GeV electrons interaction with the beam-dump recording  the deposited energy in BDX-Hodo crystal. 
 Figure~\ref{fig:fluence-mAs} shows the fluence of all particles (black) and muons only (red) on the CsI(Tl) surface. As already noticed, the high energy range of the spectrum is saturated by muons. 
 \begin{figure}[h!] 
 \center
@@ -150,11 +150,11 @@ Plots refer to the crystal located in {\bf A} (left),  {\bf B} (center), and {\b
 \includegraphics[width=5.0cm]{figs/int-rate-pe3.pdf}
 \caption {Crystal integrated rate as function of detected photo-electrons.
 Plots refer to the crystal located in {\bf A} (left),  {\bf B} (center), and {\bf C} (right).}
-\label{fig:int-rates-E}
+\label{fig:int-rates-pe}
 \end{figure}
 
 \subsubsection{Cosmic background}
-The cosmic muon background in the BDX-Hodo has been evaluated using GEMC. This is the same cosmic flux generator used in PR-16-001~\cite{bdx-proposal}. The muon spectrum has been divided in different ranges  and correctly weighted to estimate the full rate expected on the detector. Rates have been evaluated for CsI(Tl) crystal, Top scintillator,  and requiring  the coincidence of the front/back scintillator with the crystal  to mimic the condition used to identify and account for beam-on muons. Same detection thresholds (10 phe and 100 phe for scintillators and crystal respectively)were used. Tab.~\ref{tab:cosmic} shows the results of this study. The cosmic rate is negligible (in every condition $<$ 1 Hz) well below the expected rate of muons from the beam-dump.
+The cosmic muon background in the BDX-Hodo has been evaluated using GEMC. This is the same cosmic flux generator used in PR-16-001~\cite{bdx-proposal}. The muon energy spectrum has been divided in different ranges  and correctly weighted to estimate the full rate expected on the detector. Rates have been evaluated for CsI(Tl) crystal, Top scintillator,  and for the coincidence of the front/back scintillator with the crystal  to mimic the condition used to identify and account for beam-on muons. We assumed the same detection thresholds used in the other rate estimates (10 phe and 100 phe for scintillators and crystal respectively). Tab.~\ref{tab:cosmic} shows the results of this study. The cosmic rate is negligible (in every condition $<$ 1 Hz) well below the expected rate of muons from the electron beam / beam-dump interaction.
 
 \begin{table}[htp]
 \caption{Cosmic rate expected in different components of BDX-Hodo}
@@ -180,7 +180,9 @@ Cosmic muon rate  & 0.56 &  0.67 & 0.02 \\
 Practical details (drilling technology, costs and schedule) and a work plan for the proposed test configuration  are reported in the Appendix.
 
 \subsection{Summary}
-We simulated the interaction of a 11 GeV electron beam with Hall-A beam-dump studying the expected  radiation field in the beam-dump vault and in the downstream area ($\sim$20 m away) where shall be located the new underground  facility required by the BDX experiment. Two different  simulation tools (GEMC and FLUKA) where used. For some locations, results were compared with JLab Radiological Control Group estimates. Here are our main findings:
+We simulated the interaction of a 11 GeV electron beam with the Hall-A beam-dump studying the   radiation field in the beam-dump vault and in the downstream area ($\sim$20 m away) .
+ located in the area of  the new underground  facility required by the BDX experiment. Two different  simulation tools (GEMC and FLUKA) were used. For some locations, results were compared with JLab Radiological Control Group estimates. 
+Here are the main outcome::
 \begin{itemize}
 \item{our results are consistent with what obtained by RadCon;}
 \item{we confirm that only (high energy) muons and (mainly  thermal/low energy) neutrons propagates trough the beam-dump vault concrete walls  and dirt reaching the region of intereset; }
