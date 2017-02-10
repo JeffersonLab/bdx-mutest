@@ -138,13 +138,14 @@
 
 \begin{abstract}
 \textcolor{red} {}
-In response to the issue raised by JLAB-PAC44  about the experiment proposal  {\it PR-16-001 Dark matter search in a Beam-Dump eXperiment (BDX) at Jefferson Lab}~\cite{bdx-proposal} we propose to measure  the muon flux and the prompt  background  produced by the interaction of the high intensity 11 GeV electron beam with the Hall-A beam-dump. The muon   flux will be sampled at different height (with-respect-to the beam axes), positions  and angles downstream of the beam-dump to map-out the radiation field in the location of the  future BDX hall.
-In order to realistically assess the beam-on background experienced by the BDX detector, 
- a specimen of the CsI(Tl) crystal used in the  BDX electromagnetic calorimeter, will be exposed to the radiation as component of  a plastic scintillator hodoscope built  specifically for this measurement (BDX-Hodo). The use of a  loose trigger will provide further information on beam-related  low energy background  (dominated by neutrons).
-Although it will not be possible to directly compare results of this test with the experimental set-up proposed in PR-16-001, that will make use of a different and  optimised shielding, the measurement will be extremely useful to validate the MonteCarlo simulation tools (GEANT4 and FLUKA) used to design the new underground facility and optimize the BDX detector.
-
-This report is organised as follow: 
-results of the simulation of the radiation field produced by the interaction of the beam with the dump  are reported in Sec.~\ref{sec:sim}; the experimental set-up and the detector is described in Sec.\ref{sec:setup}; the expected results of the measurement are reported in Sec.~\ref{sec:results}. Details about cost estimate, work- and time-planes are reported in the Appendix.
+We address the issues raised by JLAB-PAC44  regarding the experiment proposal  {\it PR-16-001 Dark matter search in a Beam-Dump eXperiment (BDX) at Jefferson Lab}~\cite{bdx-proposal}. Significant work has been completed in the area of simulation and preparation for a background measurement behind Hall A.
+We have worked with the JLab Radiation Control group to develop the detailed geometry of the Hall A beam dump and incorporated it into
+a FLUKA simulation of backgrounds. Detailed comparisons of GEANT4 and FLUKA have been made and show very good agreement for muon fluxes under
+identical geometries, which are 
+expected to be reliable in both simulations. We are now using FLUKA to simulate neutron backgrounds for the experiment using importance sampling to 
+improve significance of small background signals at the sensitivity of the experiment. These simulations have also been used to estimate muon rates that can be
+measured in test pipes located behind Hall A at beam level. Measuring the muon rates at this location will provide an absolute normalization of our Monte Carlo
+simulations as well as confirm expected background rates for the present Hall A beam dump geometry. We provide a proposal and cost estimate for this measurement.
 
 \end{abstract}
 
@@ -152,12 +153,22 @@ results of the simulation of the radiation field produced by the interaction of 
  
 \end{center} 
 
-%\newpage
+\newpage
 \tableofcontents
 \newpage
 
 
 %\linenumbers
+
+\section{Introduction}
+In response to the issue raised by JLAB-PAC44  about the experiment proposal  {\it PR-16-001 Dark matter search in a Beam-Dump eXperiment (BDX) at Jefferson Lab}~\cite{bdx-proposal} we propose to measure  the muon flux and the prompt  background  produced by the interaction of the high intensity 11 GeV electron beam with the Hall-A beam-dump. The muon   flux will be sampled at different height (with-respect-to the beam axes), positions  and angles downstream of the beam-dump to map-out the radiation field in the location of the  future BDX hall.
+In order to realistically assess the beam-on background experienced by the BDX detector, we will use a detector package (BDX-Hodo) containing a CsI(Tl) crystal from the  BDX electromagnetic calorimeter
+surrounded by plastic scintillator paddles to trigger on horizontal muons and veto cosmic rays. The BDX-Hodo is specifically designed for this measurement and will use a  loose trigger to provide further information on 
+beam-related  low energy background  (dominated by neutrons).
+Although it will not be possible to directly compare results of this test with the experimental set-up proposed in PR-16-001, that will make use of a different and  optimized shielding, the measurement will be extremely useful to validate the Monte Carlo simulation tools (GEANT4 and FLUKA) used to design the new underground facility and optimize the BDX detector.
+
+This report is organized as follow: 
+results of the simulation of the radiation field produced by the interaction of the beam with the dump  are reported in Sec.~\ref{sec:sim}; the experimental set-up and the detector is described in Sec.\ref{sec:setup}; the expected results of the measurement are reported in Sec.~\ref{sec:results}. Details about cost estimate, work- and time-planes are reported in the Appendix.
 
 \input{BDX-mutest-sim}
 \clearpage
@@ -174,5 +185,6 @@ results of the simulation of the radiation field produced by the interaction of 
 %\nocite{*}
 \bibliographystyle{unsrt}                                                                              
 \bibliography{BDX-mutest-bib}
+
 
 \end{document}
