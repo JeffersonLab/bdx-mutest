@@ -29,29 +29,29 @@ the thickness of the concrete tunnel surrounding the Al dump is about 4-5 m thic
 \label{fig:fluka-bd-dwns}
 \end{figure}
 \subsection{The beam-dump model in FLUKA} 
-The beam-dump geometry and  materials have  been implemented in FLUKA-2011.2c.5 by the Jefferson Lab Radiation Control Department. Details are reported in Ref.~\cite{jnote-bd}.  The input card used to run the program  includes all physics processes and a tuned set of weight biasing to speed up the running time while preserving the  results accuracy. 
+The beam-dump geometry and  materials have  been implemented in FLUKA-2011.2c.5 by the Jefferson Lab Radiation Control Department. Details are reported in Ref.~\cite{jnote-bd}.  The input card used to run the program  includes all physics processes and a tuned set of biasing weights to speed up the running time while preserving the  results accuracy. 
 The $\mu$, n, and $\gamma$ fluence (differential in angle and energy) per electrons-on-target (EOT) were  calculated  at  411.2 cm downstream of the beam window, through a circular area of 105 cm$^2$. Figure~\ref{fig:fluka-bd} shows the FLUKA graphic representation of the beam-dump and the location of the flux detector.
 In our model we extended the original beam-dump description, by including  
  the proper geometry and material composition around and downstream of the beam-dump.
 Figure~\ref{fig:fluka-bd-dwns}  shows the geometry of of the concrete bunker surrounding the beam-dump and  the downstream area filled by soil as implemented in our FLUKA model.
 
-
-
-\subsection{The beam-dump model in GEANT4 (GEMC)}
-The beam-dump, as well as the geometry and composition  of surrounding environment,
- has been implemented in GEANT4 using the GEMC tool~\cite{gemc}. This model is a refined version with respect to the one used  in PR-16-001~\cite{bdx-proposal} that better describes the beam-dump geometry, matching the level of details  implemented in the FLUKA model. For a better description of  muon transportation, the {\tt G4GammaConversionToMuons} has been added to the standard physics list used in simulations of  PR-16-001({\tt FTFP\_BERT\_HP + STD + HP}).
-Particles fluence has been sampled  by mean of a flux detector  positioned in the same location as in the FLUKA model.
-Figure~\ref{fig:gemc-bd-dwns} shows the beam-dump and vicinity implemented in GEMC.
 \begin{figure}[h!] 
 \center
 \includegraphics[width=12.5cm]{figs/gemc-bd-dwns.pdf}  
 \caption{The geometry/composition  of the beam-dump, the sourraunding concrete bunker and  the soil as implemented in GEMC. The drawings also shows the pipe used to lower the BDX-Hodo detector at the  beam-line depth.}
 \label{fig:gemc-bd-dwns}
 \end{figure}
+
+\subsection{The beam-dump model in GEANT4 (GEMC)}
+The beam-dump, as well as the geometry and composition  of surrounding environment,
+ has been implemented in GEANT4 using the GEMC tool~\cite{gemc}. This model is a refined version with respect to the one used  in PR-16-001~\cite{bdx-proposal} that better describes the beam-dump geometry, matching the level of details  implemented in the FLUKA model. For a better description of  muon transportation, the {\tt G4GammaConversionToMuons} has been added to the standard physics list used in simulations of  PR-16-001({\tt FTFP\_BERT\_HP + STD + HP}).
+Particles fluence has been sampled  by mean of a flux detector  positioned in the same location as in the FLUKA model.
+Figure~\ref{fig:gemc-bd-dwns} shows the beam-dump and vicinity implemented in GEMC.
+
 \subsection{Muons from beam-dump interaction}
 A comparison of muon fluence downstream of the beam-dump (see above for details about the location)
 obtained by FLUKA and GEMC are reported in Fig.~\ref{fig:mu-flu-bd}. Considering that low energy muons are absorbed by the bunker-head shielding, to keep the GEMC running time reasonable, only particles with energy greater than 100 MeV ({\tt ENERGY\_CUT=100*MeV}) have been tracked and sampled. A total of 4$\times10^9$ ($9\times 10^6$) EOT have been simulated with GEMC (FLUKA). The comparison of the two simulations shows a perfect agreement in the full energy range where data were generated.
-In spite of a factor of $\times$100  less statistics, FLUKA shows, as expected, smaller error bars. This reflects the optimised weight biasing used by the simulation to generate high statistics for the low probability processes keeping the total number of events limited.
+In spite of a factor of $\times$100  less statistics, FLUKA shows, as expected, smaller error bars. This reflects the optimised biasing weights used by the simulation to generate high statistics for the low probability processes keeping the total number of events limited.
 To penetrate  the concrete shielding and the soil, a minimum energy of  E$_\mu>4$ GeV is required. With this energy cut,   the integrated number of muon per EOT results in $4.8\pm 0.1 \times 10^{-7}$ ($5.5\pm 0.2 \times 10^{-7}$) for GEMC and FLUKA respectively.
 Figure~\ref{fig:mu-flu-bd-2d} shows the correlation between the muon energy and the azimuthal angle (with-respect-to the beam axes): the regions  populated in both simulations show a similar shape.
 
@@ -72,6 +72,12 @@ Figure~\ref{fig:mu-flu-bd-2d} shows the correlation between the muon energy and 
 
 \subsection{Sampling  and particle transport}\label{sec:sampling}
 The good agreement between two independent simulation tools (FLUKA and GEMC)  gives us confidence about reliability of the obtained results. Both methods have pros and cons. FLUKA shows a superior speed in running but a complicated implementation of  variables of interest  (e.g. the final output is given via {\it scores} such as fluence or distribution in specific locations  need to be pre-defined). GEMC (GEANT4) tracks particles in all volumes providing a straightforward  output (particle four-momenta) in the desired flux detector but requires unrealistic running times to collect a reasonable statistics (in particular when an em shower is involved). In the following we describe how we overtook these difficulties.
+\begin{figure}[h!] 
+\center
+\includegraphics[width=12cm]{figs/mu-gen.pdf}   
+\caption{The  $\mu$ sampling/generation area is the surface enclosed by  the magenta circle.}
+\label{fig:mu-gen}
+\end{figure}
 
 \subsubsection{Muons - GEMC}\label{sec:gmc-mu}
 We used GEMC to simulate muons. To make the  process more efficient, we followed the   procedure described below: 
@@ -84,12 +90,6 @@ We used GEMC to simulate muons. To make the  process more efficient, we followed
 \end{itemize}
 The area where  muons are sampled from the primary beam/dump interaction and used  as source in the custom-made event generator is shown in Fig.~\ref{fig:mu-gen}.
 
-\begin{figure}[h!] 
-\center
-\includegraphics[width=12cm]{figs/mu-gen.pdf}   
-\caption{The  $\mu$ sampling/generation area is the surface enclosed by  the magenta circle.}
-\label{fig:mu-gen}
-\end{figure}
 
 
 Figure~\ref{fig:mu-sampling} shows the muon distributions (energy vs azimuthal angle and radial distance from the beam line) downstream of the beam-dump, as obtained by the full GEMC simulation of  11 GeV electrons hitting the beam-dump.
@@ -114,7 +114,7 @@ The difference in the error bar size indicates the improvement obtained by adopt
 
 \begin{figure}[h!] 
 \center
-\includegraphics[width=15cm]{figs/fig19_crsA.eps}    
+\includegraphics[width=11cm]{figs/fig19_crsA.eps}    
 \caption{Fluence  on  CsI(Tl) crystal of  all crossing particles (black) and muons only (red). The crystal is located in the region of interest $\sim 20$ m downstream of the beam-dump. }
 \label{fig:bg-csi}
 \end{figure}
@@ -126,8 +126,8 @@ Figure ~\ref{fig:bg-csi} shows the resulting fluence per EOT as a function of en
 As expected,  muons are the only high energetic  particles reaching  the crystal while other species (neutrons mainly) account for the low energy of the spectrum. More details are reported in Sec.~\ref{sec:results}.
 \begin{figure}[h!] 
 \center
-\includegraphics[width=7.5cm]{figs/NeutronsDump_1D.pdf}    
-\includegraphics[width=7.5cm]{figs/NeutronsDumpComparison_1D.pdf}   
+\includegraphics[width=8.cm]{figs/NeutronsDump_1D.pdf}    
+\includegraphics[width=8.cm]{figs/NeutronsDumpComparison_1D.pdf}   
 \caption{Neutron spectrum downstream of the the dump obtained by full FLUKA simulation (left). The right panel shows  the comparison between FLUKA (black) and GEMC (red) for the high energy part pf the spectrum.}
 \label{fig:n-comp}
 \end{figure}
