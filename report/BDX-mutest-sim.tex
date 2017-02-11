@@ -1,5 +1,12 @@
 \section{MC simulations}
 \label{sec:sim}
+\begin{figure}[h!] 
+\center
+\includegraphics[width=12.5cm]{figs/beam-dump-br.pdf}
+\includegraphics[width=12.5cm]{figs/beam-dump.pdf}
+\caption{Hall-A beam dump and beam dump enclosure. }
+\label{fig:bd}
+\end{figure}
 \subsection{The Hall-A high-power beam-dump}
 The Hall A and C use identical high-power absorbing (up to 1 MW)  beam-dumps to stop the 11 GeV beam, remnant of beam/target interaction. The dump is 
 composed of a set of about 80 aluminium disks, each
@@ -9,13 +16,6 @@ and approximately 100 cm long. The dump is cooled by circulating water. The full
 drawing of the beam-dump is shown in Fig.~\ref{fig:bd}. To increase the radiation shielding,
 the thickness of the concrete tunnel surrounding the Al dump is about 4-5 m thick.
 
-\begin{figure}[h!] 
-\center
-\includegraphics[width=12.5cm]{figs/beam-dump-br.pdf}
-\includegraphics[width=12.5cm]{figs/beam-dump.pdf}
-\caption{Hall-A beam dump and beam dump enclosure. }
-\label{fig:bd}
-\end{figure}
 \begin{figure}[h!] 
 \center
 \includegraphics[width=14.5cm]{figs/fluka-bd.pdf}
@@ -28,9 +28,9 @@ the thickness of the concrete tunnel surrounding the Al dump is about 4-5 m thic
 \caption{The geometry/composition  of the concrete bunker surrounding the beam-dump and  the downstream soil as implemented in FLUKA.}
 \label{fig:fluka-bd-dwns}
 \end{figure}
-\subsection{The beam-dump model in FLUKA}
+\subsection{The beam-dump model in FLUKA} 
 The beam-dump geometry and  materials have  been implemented in FLUKA-2011.2c.5 by the Jefferson Lab Radiation Control Department. Details are reported in Ref.~\cite{jnote-bd}.  The input card used to run the program  includes all physics processes and a tuned set of weight biasing to speed up the running time while preserving the  results accuracy. 
-The $\mu$, n, and $\gamma$ fluence (differential in angle and energy) per electrons-on-target (EOT) were  calculated   at XXX cm  downstream of the beam-dump exit, through a circular area of 105 cm$^2$. Figure~\ref{fig:fluka-bd} shows the FLUKA graphic representation of the beam-dump and the location of the flux detector.
+The $\mu$, n, and $\gamma$ fluence (differential in angle and energy) per electrons-on-target (EOT) were  calculated  at  411.2 cm downstream of the beam window, through a circular area of 105 cm$^2$. Figure~\ref{fig:fluka-bd} shows the FLUKA graphic representation of the beam-dump and the location of the flux detector.
 In our model we extended the original beam-dump description, by including  
  the proper geometry and material composition around and downstream of the beam-dump.
 Figure~\ref{fig:fluka-bd-dwns}  shows the geometry of of the concrete bunker surrounding the beam-dump and  the downstream area filled by soil as implemented in our FLUKA model.
